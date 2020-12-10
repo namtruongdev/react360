@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <preloader image="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0001.jpg" />
+    <userInterface showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="#FFFFFF" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0.51" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="true" fullScreenBackColor="#FFFFFF" toolbarPosition="0" customCursorClass="default_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="true" />
+    <control dragSpeed="0.13" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="true" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" zoomSteps="1" zoomSpeed="300" singleClickZooms="false" pauseOnPreload="false" resumePreloadOnHover="false" mouseWheelDrag="false" mouseWheelDragZoomOnly="false" allowRotateInputInZoom="false" allowPanX="true" allowPanY="true" />
+    <rotation firstImage="0" rotate="false" rotatePeriod="7" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" />
+  </settings>
+  <hotspots />
+  <images rows="1">
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0001.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0002.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0003.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0004.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0005.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0006.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0007.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0008.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0009.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0010.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0011.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0012.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0013.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0014.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0015.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0016.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0017.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0018.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0019.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0020.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0021.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0022.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0023.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0024.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0025.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0026.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0027.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0028.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0029.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0030.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0031.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0032.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0033.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0034.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0035.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0036.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0037.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0038.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0039.jpg" />
+    <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0040.jpg" />
+  </images>
+</config>

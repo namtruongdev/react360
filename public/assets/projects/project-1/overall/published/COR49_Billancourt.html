@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+<title>COR49_Billancourt</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<!-- Use these three includes on your pages under <head> section -->
+
+<link type="text/css" rel="stylesheet" href="imagerotator/html/css/round.css"/>
+<script type="text/javascript" src="imagerotator/html/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="imagerotator/html/js/imagerotator.js"></script>
+
+
+<style type= "text/css">
+    
+html, body
+{
+    padding: 0;
+    margin: 0;
+}
+
+/*-- Use #content CSS to customize size, position, border, etc of your 360 view --*/
+
+#content
+{
+    width: 1920px;
+    height: 1080px;
+    /* border: 1px dotted #cecfd2; */
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+    <!--
+        Just copy / paste the content div below onto your page and define content CSS styles as needed.
+        Then set configFileURL below to point to your product configuration XML.
+    -->
+
+    <div id="content">
+
+        <div id="wr360PlayerId" class="wr360_player" style="background-color:#FFFFFF;">
+        </div>
+
+        <script language="javascript" type="text/javascript">
+
+            var rotator = WR360.ImageRotator.Create('wr360PlayerId');
+
+            rotator.licenseFileURL = 'license.lic';
+            rotator.settings.configFileURL = '360_assets/COR49_Billancourt/COR49_Billancourt.xml';
+            rotator.settings.graphicsPath = 'imagerotator/html/img/round';
+		    rotator.settings.alt = '360 degree view - COR49_Billancourt';
+            rotator.settings.googleEventTracking = false;
+            rotator.settings.responsiveBaseWidth = 0;
+            rotator.settings.responsiveMinHeight = 0;
+
+            rotator.runImageRotator();
+
+        </script>
+
+    </div>
+
+
+</body>
+
+</html>

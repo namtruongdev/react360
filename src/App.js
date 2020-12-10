@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
 import './App.css';
-import config from './360_assets/COR49_Billancourt/COR49_Billancourt.xml';
 
-import './imagerotator/html/js/imagerotator.js';
+import './assets/js/imagerotator.js';
+import config from './assets/projects/projects-1/overall/published/360_assets/COR49_Billancourt/COR49_Billancourt.xml';
 
 const App = () => {
-  console.log(config);
   useEffect(() => {
     window.$('#wr360PlayerId').rotator({
       licenseFileURL: 'license.lic',
-      configFileURL: `${config}`,
-      graphicsPath: 'imagerotator/html/img/retina',
+      configFileURL: config,
+      rootPath: 'http://localhost:3000/src/',
+      graphicsPath: 'imagerotator/html/img/round',
       alt: '360 degree view ALT description',
       googleEventTracking: false,
     });
