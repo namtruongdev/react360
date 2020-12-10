@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import './assets/js/imagerotator.js';
+import { initializeAPIDemo } from './assets/projects/project-1/overall/action';
 import config from './assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/COR49_Billancourt.xml';
 import license from './assets/projects/project-1/overall/published/license.lic';
 import './assets/projects/project-1/overall/published/imagerotator/html/css/round.css';
@@ -14,6 +15,9 @@ const App = () => {
         '/assets/projects/project-1/overall/published/imagerotator/html/img/round',
       alt: '360 degree view ALT description',
       googleEventTracking: false,
+      apiReadyCallback: function (api, isFullScreen) {
+        if (!isFullScreen) initializeAPIDemo(api);
+      },
     });
   }, []);
   return (
