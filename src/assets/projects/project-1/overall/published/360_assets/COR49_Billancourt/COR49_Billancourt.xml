@@ -16,13 +16,13 @@
   </hotspots>
   <images rows="1">
     <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0001.jpg">
-        <hotspot source="spot1" offsetX="770" offsetY="430" />
-     <hotspot source="spot2" offsetX="880" offsetY="259" />
+      <hotspot source="spot1" offsetX="770" offsetY="430" />
+      <hotspot source="spot2" offsetX="880" offsetY="259" />
     </image>
     <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0002.jpg">
     <hotspot source="spot1" offsetX="750" offsetY="430" />
-       <hotspot source="spot2" offsetX="855" offsetY="259" />
-     </image>
+      <hotspot source="spot2" offsetX="855" offsetY="259" />
+      </image>
     <image src="../../assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0003.jpg">
     <hotspot source="spot1" offsetX="730" offsetY="430" />
        <hotspot source="spot2" offsetX="830" offsetY="259" />

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+<title>VansShoe</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<!-- Use these three includes on your pages under <head> section -->
+
+<link type="text/css" rel="stylesheet" href="imagerotator/html/css/round.css"/>
+<script type="text/javascript" src="imagerotator/html/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="imagerotator/html/js/imagerotator.js"></script>
+
+
+<style type= "text/css">
+
+#viewerWrap1
+{
+	margin: 0 auto 0 auto;
+	width: 100%;
+	max-width: 600px;
+	height: 450px;
+	border: 1px dotted #cecfd2;
+	position: relative;
+	background: url(360_assets/VansShoe/images/Filename_01.jpg) center center no-repeat;
+}
+
+#viewer1
+{
+	background: none;
+}
+
+.emptyScroll
+{
+	height: 2000px;
+	text-align: center;
+	font-size: 20px;
+	padding: 50px 0 0 0;
+}
+
+</style>
+
+
+<script language="javascript" type="text/javascript">
+
+function loadIfVisible() {
+	var viewerParent = jQuery('#viewerWrap1');
+	var rotatorTop = viewerParent.offset().top;
+	var rotatorBottom = rotatorTop + viewerParent.height();
+	var scrollTop = jQuery(this).scrollTop();
+	var windowHeight = jQuery(window).height();
+
+	if (scrollTop +  windowHeight > rotatorTop && scrollTop < rotatorBottom) {
+		jQuery('#viewer1').rotator({
+			licenseFileURL: 'license.lic',
+			configFileURL: '360_assets/VansShoe/VansShoe.xml',
+			graphicsPath: 'imagerotator/html/img/basic',
+			googleEventTracking: false,
+			alt: '360 degree view ALT description',
+			responsiveBaseWidth: 600,
+			responsiveMinHeight: 360
+		});
+		
+		return true;
+	}
+	
+	return false;
+}
+
+jQuery(document).ready(function() {
+	var isLoaded = loadIfVisible();
+	if (!isLoaded) {
+		jQuery(window).on('scroll.viewer1', function() {
+			if (loadIfVisible()) {
+				jQuery(window).off('scroll.viewer1');
+			}
+		});
+	}
+});
+
+</script>
+
+
+</head>
+
+
+
+<body>
+
+	<div class="emptyScroll">
+		Scroll until you see a static image of a shoe at which point the viewer will load.
+	</div>
+
+	<div id="viewerWrap1">
+		<div id="viewer1" class="wr360_player">
+		</div>
+	</div>
+
+	<div class="emptyScroll">
+	</div>
+	
+</body>
+
+</html>

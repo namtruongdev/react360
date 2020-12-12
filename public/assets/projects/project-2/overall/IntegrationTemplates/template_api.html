@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+<head>
+<title>VansShoe</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+<!-- Use these three includes on your pages under <head> section -->
+
+<link type="text/css" rel="stylesheet" href="imagerotator/html/css/basic.css"/>
+<script type="text/javascript" src="imagerotator/html/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="imagerotator/html/js/imagerotator.js"></script>
+
+
+<style type= "text/css">
+
+/*-- Use .content CSS to customize size, position, border, etc of your 360 views --*/
+body
+{
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.content
+{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 600px;
+    height: 450px;
+    border: 1px dotted #cecfd2;
+}
+
+h2
+{
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+</style>
+
+
+<!-- Copy this script block and paste under your page <head> section or somewhere inside your page <body>
+     Replace path to configFileURL to point to another 360 view you would like to show on the same page.
+-->
+
+<script language="javascript" type="text/javascript">
+
+function initializeAPIDemo(api){
+
+    $("#zoomToggle").click(function(e){ 
+        e.preventDefault();
+        api.toolbar.zoomToggle();
+    });
+
+    $("#hotspotToggle").click(function(e){ 
+        e.preventDefault();
+        api.toolbar.hotspotToggle();
+    });
+
+    $("#startLeftArrowRotate").click(function(e){
+        e.preventDefault();
+        api.toolbar.startLeftArrowRotate();
+    });
+
+    $("#startRightArrowRotate").click(function(e){
+        e.preventDefault();
+        api.toolbar.startRightArrowRotate();
+    });
+
+    $("#stopArrowRotate").click(function(e){
+        e.preventDefault();
+        api.toolbar.stopArrowRotate();
+    });
+
+    $("#moveRowUp").click(function(e){
+        e.preventDefault();
+        api.toolbar.moveRowUp();
+    });
+
+    $("#moveRowDown").click(function(e){
+        e.preventDefault();
+        api.toolbar.moveRowDown();
+    });
+
+    $("#playbackStart").click(function(e){
+        e.preventDefault();
+        api.toolbar.playbackStart();
+    });
+
+    $("#playbackStop").click(function(e){
+        e.preventDefault();
+        api.toolbar.playbackStop();
+    });
+
+    $("#playbackToggle").click(function(e){
+        e.preventDefault();
+        api.toolbar.playbackToggle();
+    });
+
+    $("#openFullScreen").click(function(e){
+        e.preventDefault();
+        api.toolbar.openFullScreen();
+    });
+
+    $("#rotateOnce").click(function(e){
+        e.preventDefault();
+        api.toolbar.rotateOnce(
+            // Optional configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+            2,
+            // Optional callback which is called when the rotation stops.
+            function(){
+                alert("rotateOnce finished");
+            });
+    });
+
+    $("#getTotalImageCount").click(function(e){
+        e.preventDefault();
+        alert("Total number of images is " + api.images.getTotalImageCount());
+    });
+
+    $("#getRowCount").click(function(e){
+        e.preventDefault();
+        alert("Number of rows is " + api.images.getRowCount());
+    });
+
+    $("#getCurrentImageIndex").click(function(e){
+        e.preventDefault();
+        alert("Current image index is " + api.images.getCurrentImageIndex());
+    });
+
+    $("#getCurrentRowIndex").click(function(e){
+        e.preventDefault();
+        alert("Current row index is " + api.images.getCurrentRowIndex());
+    });
+    
+    $("#showImageByIndex").click(function(e){
+        e.preventDefault();
+        api.images.showImageByIndex(2, 0 /* second param is row index and can be omitted */);
+    });
+
+    $("#showImageByDelta").click(function(e){
+        e.preventDefault();
+        api.images.showImageByDelta(-2, 0 /* second param is row index and can be omitted */);
+    });
+
+    $("#jumpToLabel").click(function(e){
+        e.preventDefault();
+        api.images.jumpToLabel("play");
+    });
+
+    $("#playToLabel").click(function(e){
+        e.preventDefault();
+        api.images.playToLabel(
+            // Label name as specified in SpotEditor under Images->List
+            "play", 
+            // Configurable playback speed (period). Period represents the number of seconds it takes to make full 360 degree spin.
+            1, 
+            // Optional callback which is called when label is reached.
+            function(labelName){ 
+                alert("Reached label: " + labelName);
+            });
+    });
+
+     $("#zoom").click(function(e){
+        e.preventDefault();
+        api.images.zoom(1 /* target zoom in/out step; use 0 to zoom out to original state. */, null /* optionally pass coordindate to zoom in/out to, e.g {x:100, y:100} */ );
+    });
+
+    $("#onZoom").click(function(e){
+        e.preventDefault();
+        api.images.onZoom(function(zoomLevel, zoomStep){
+            alert("Current zoom level (%): " + zoomLevel + " and zoom step: " + zoomStep);
+        });
+    });
+
+    $("#onFrame").click(function(e){
+        e.preventDefault();
+        api.images.onFrame(function(frame){
+            alert("Current frame: imageIndex - " + frame.index.image + ", rowIndex - " + frame.index.row);
+        });
+    });
+
+    $("#activate").click(function(e){
+        e.preventDefault();
+        api.hotspots.activate("spot1", 4000 /* 4000 is an example timeout before the hotspot deactivates itself */);
+    });
+
+    $("#deactivate").click(function(e){
+        e.preventDefault();
+        api.hotspots.deactivate("spot1");
+    });
+
+    var subscribedToHotspotAction = false;
+
+    $("#onAction").click(function(e){
+        e.preventDefault();
+        if (subscribedToHotspotAction == false){
+            subscribedToHotspotAction = true;
+            api.hotspots.onAction(function(hotspotConfig){
+                jQuery(".trace").append(new Date().toLocaleTimeString() + ": Hotspot [" + hotspotConfig.id + "] triggered action. See browser console for details.<br>").slideDown(300);
+                console.log(JSON.stringify(hotspotConfig, null, 4));
+                // return true to override default action.
+                return false; 
+            });
+        }
+    });
+
+    var subscribedToHotspotActivation = false;
+
+    $("#onActivate").click(function(e){
+        e.preventDefault();
+        if (subscribedToHotspotActivation == false){
+            subscribedToHotspotActivation = true;
+            api.hotspots.onActivate(function(hotspotData){
+                // You can modify hotspotData->hotspotConfig "on-the-fly" to dynamically adjust the hotspot cotent presentation that follows.
+                jQuery(".trace").append(new Date().toLocaleTimeString() + ": Hotspot [" + hotspotData.hotspotConfig.id + "] has been activated. See browser console for details.<br>").slideDown(300);
+                console.log(JSON.stringify(hotspotData, null, 4));
+                // return true to override default activation (e.g present your own hotspot content).
+                return false; 
+            });
+        }
+    });
+
+    var subscribedToHotspotDeactivation = false;
+
+    $("#onDeactivate").click(function(e){
+        e.preventDefault();
+        if (subscribedToHotspotDeactivation == false){
+            subscribedToHotspotDeactivation = true;
+            api.hotspots.onDeactivate(function(hotspotData){
+                jQuery(".trace").append(new Date().toLocaleTimeString() + ": Hotspot [" + hotspotData.hotspotConfig.id + "] has been deactivated. See browser console for details.<br>").slideDown(300); 
+                console.log(JSON.stringify(hotspotData, null, 4));
+                // return true to prevent default deactivation (e.g handle your own deactivation logic).
+                return false; 
+            });
+        }
+    });
+
+    var hideHotspot = false;
+
+    $("#hide").click(function(e){
+        e.preventDefault();
+        hideHotspot = !hideHotspot;
+        api.hotspots.hide("spot1", hideHotspot);
+    });
+
+    $("#getDynamicHotspots").click(function(e){
+        e.preventDefault();
+        var hotspotDataArray = api.hotspots.getDynamicHotspots();
+        alert(JSON.stringify(hotspotDataArray, null, 4)); 
+    });
+
+    $("#reload").click(function(e){
+        e.preventDefault();
+        api.reload(
+            // XML path to the same or different 360 viewer config xml.
+            "360_assets/VansShoe/VansShoe.xml",   
+            // Optional RootPath if CDN or Master Config support is used (PRO). Usually null.
+            null,  
+            // Optional callback which is called when reload is complete.
+            function(){ 
+                alert("Reload finished!");
+            }, 
+            // Optional zero-based index of the image to load / show first upon reload (-1 or empty to use config settings).
+            api.images.getCurrentImageIndex(),
+            // Reload row index for multi-row 3d views
+            api.images.getCurrentRowIndex());
+    });
+
+    $("#updateDimensions").click(function(e){
+        e.preventDefault();
+        api.updateDimensions();
+    });
+		
+    $("#delete").click(function(e){
+        e.preventDefault();
+        api.delete();
+    });
+}
+
+
+
+jQuery(document).ready(function(){
+
+    jQuery('#wr360PlayerId').rotator({
+        licenseFileURL: 'license.lic',
+		configFileURL: '360_assets/VansShoe/VansShoe.xml',
+		graphicsPath: 'imagerotator/html/img/basic',
+		alt: '360 degree view ALT description',
+        googleEventTracking: false,
+        apiReadyCallback: function(api, isFullScreen){
+            // apiReadyCallback is also called when user enters full-screen which creates a separate viewer object.
+            if (!isFullScreen) 
+                initializeAPIDemo(api);
+        },
+        // If you need custom loading progress control, use progressCallback
+        // progressCallback: function(isFullScreen, percentLoaded){console.log("Loaded " + percentLoaded + "%");}
+    });
+
+});
+
+</script>
+
+<!-- End of script copy / paste -->
+
+
+</head>
+
+
+
+<body>
+   
+    <p>Click on the API links below to see it in action. You can hide the default toolbar controls via the Interface tab in SpotEditor or by selecting Empty skin. More details about the APIs are
+    available in our <a href="http://www.webrotate360.com/Downloads/Resources/Readme.pdf">User Guide</a>.</p>
+   
+    <!-- Copy &  paste the content div below onto your page and define content CSS styles as needed -->
+
+    <div class="content">
+
+        <div id="wr360PlayerId" class="wr360_player" style="background-color:#FFFFFF;">
+        </div>
+
+    </div>
+  
+    <!-- API demo controls -->
+
+    <div class="trace" style="padding:30px 0 0 30px;color:red;font-weight:bold;display:none;">
+    </div>
+
+    <div style="margin:60px 0 0 30px;width:900px;overflow:hidden;">
+        <div style="float:left;width:200px;">
+            <h2>Toolbar API</h2>
+            <ul>
+                <li><a href="#" id="zoomToggle">zoomToggle</a></li>
+                <li><a href="#" id="hotspotToggle">hotspotToggle</a></li>
+                <li><a href="#" id="startLeftArrowRotate">startLeftArrowRotate</a></li>
+                <li><a href="#" id="startRightArrowRotate">startRightArrowRotate</a></li>
+                <li><a href="#" id="stopArrowRotate">stopArrowRotate</a></li>
+                <li><a href="#" id="moveRowUp">moveRowUp</a></li>
+                <li><a href="#" id="moveRowDown">moveRowDown</a></li>
+                <li><a href="#" id="playbackStart">playbackStart</a></li>
+                <li><a href="#" id="playbackStop">playbackStop</a></li>
+                <li><a href="#" id="playbackToggle">playbackToggle</a></li>
+                <li><a href="#" id="openFullScreen">openFullScreen (PRO only)</a></li>
+                <li><a href="#" id="rotateOnce">rotateOnce</a></li>
+            </ul>
+        </div>
+        <div style="float:left;width:700px;">
+            <h2>Image API</h2>
+            <ul>
+                <li><a href="#" id="getTotalImageCount">getTotalImageCount</a></li>
+                <li><a href="#" id="getRowCount">getRowCount</a></li>
+                <li><a href="#" id="getCurrentImageIndex">getCurrentImageIndex</a></li>
+                <li><a href="#" id="getCurrentRowIndex">getCurrentRowIndex</a></li>
+                <li><a href="#" id="showImageByIndex">showImageByIndex</a> (<i>Example index is 2 in 1st row</i>)</li>
+                <li><a href="#" id="showImageByDelta">showImageByDelta</a> (<i>Example delta is -2 in 1st row</i>)</li>
+                <li><a href="#" id="jumpToLabel">jumpToLabel</a> (<i>Example label is "play". Create one first in SpotEditor under Images->List</i>)</li>
+                <li><a href="#" id="playToLabel">playToLabel</a> (<i>Example label is "play". Create one first in SpotEditor under Images->List</i>)</li>
+                <li><a href="#" id="zoom">zoom</a> (<i>Can specify zoom coordinate and zoom step if zoom increments were configured</i>)</li>
+                <li><a href="#" id="onZoom">onZoom</a> (<i>Click once to subscribe to this event, then click zoom on the toolbar</i>)</li>
+				<li><a href="#" id="onFrame">onFrame</a> (<i>Click once to subscribe to this event, then spin the images</i>)</li>
+            </ul>
+        </div>
+        <div style="clear:both;padding-top:10px;">
+            <h2>Hotspot API</h2>
+            <ul>
+                <li><a href="#" id="activate">activate</a> (<i>To test, create a hotspot with image or text content named spot1</i>)</li>
+                <li><a href="#" id="deactivate">deactivate</a> (<i>To test, create a hotspot with image or text content named spot1</i>)</li>
+                <li><a href="#" id="onAction">onAction</a> (<i>Click once to subscribe to hotspot action events</i>)</li>
+                <li><a href="#" id="onActivate">onActivate</a> (<i>Click once to subscribe to hotspot activation events</i>)</li>
+                <li><a href="#" id="onDeactivate">onDeactivate</a> (<i>Click once to subscribe to hotspot deactivation events</i>)</li>
+                <li><a href="#" id="hide">hide (unhide)</a> (<i>To test, create a hotspot named spot1</i>)</li>
+                <li><a href="#" id="getDynamicHotspots">getDynamicHotspots</a></li>
+            </ul>
+        </div>
+        <div style="clear:both;padding-top:10px;">
+            <h2>Misc API</h2>
+            <ul>
+                <li><a href="#" id="reload">reload</a> (<i>Can be used to load other 360 views in place</i>)</li>
+                <li><a href="#" id="updateDimensions">updateDimensions</a> (<i>Call if your website doesn't rely on CSS for layout responsiveness</i>)</li>
+				<li><a href="#" id="delete">delete</a> (<i>Terminate viewer instance and free memory</i>)</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+        
