@@ -8,10 +8,10 @@
   </settings>
   <hotspots>
     <hotspot id="spot1" renderMode="0" indicatorImage="circ-cross-thin-blue.svg">
-      <spotinfo txt="Sample hotspot 1" css="font-family:Arial;font-size:14px;color:#333333;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;background-color:rgba(255,255,255,0.97);" clickAction="5" clickData="play" clickDataParam="2" />
+      <spotinfo css="font-family:Arial;font-size:14px;color:#333333;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;background-color:rgba(255,255,255,0.97);" clickAction="5" clickData="play" clickDataParam="2" />
     </hotspot>
     <hotspot id="spot2" renderMode="0" indicatorImage="circ-cross-thin-green.svg">
-      <spotinfo txt="Sample hotspot 2" css="font-family:Arial;font-size:14px;color:#333333;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;background-color:rgba(255,255,255,0.97);" clickAction="5" clickData="label2" clickDataParam="2" />
+      <spotinfo css="font-family:Arial;font-size:14px;color:#333333;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;background-color:rgba(255,255,255,0.97);" clickAction="5" clickData="label2" clickDataParam="2" />
     </hotspot>
   </hotspots>
   <images rows="1" highresWidth="1566" highresHeight="1032">
