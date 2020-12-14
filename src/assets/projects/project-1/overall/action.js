@@ -28,6 +28,7 @@ export const initializeAPIDemo = (api) => {
       config.path =
         '/assets/projects/project-2/overall/IntegrationTemplates/360_assets/VansShoe/VansShoe.xml';
     }
+
     api.reload(config.path, null, null, api.images.getCurrentImageIndex());
   });
 };
