@@ -49,3 +49,31 @@
   color: white !important;
   background-color: #013668;
 }
+
+
+@media(max-width:739px) {
+  .menu ul {
+    display: flex;
+  }
+  .menu li a {
+    padding: 0;
+  }
+  .menu .topli a {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+  }
+  .menu .bottomli a {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+  }
+}
+
+@media(max-width:399px) {
+  .menu li a {
+    font-size: 14px;
+    min-width: 50px;
+  }
+}
+
