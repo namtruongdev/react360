@@ -21,19 +21,19 @@ const App = () => {
       apiReadyCallback: (api, isFullScreen) => {
         if (!isFullScreen) {
           initializeAPIDemo(api);
+          for (let i = 1; i <= 36; i++) {
+            let fileName = `Filename_0${i}.jpg`;
+            if (i >= 10) fileName = `Filename_${i}.jpg`;
+            window
+              .$('<img>')
+              .attr({
+                src: `/assets/projects/project-2/overall/IntegrationTemplates/360_assets/VansShoe/images/${fileName}`,
+              })
+              .appendTo('.hidden');
+          }
         }
       },
     });
-    for (let i = 1; i <= 36; i++) {
-      let fileName = `Filename_0${i}.jpg`;
-      if (i >= 10) fileName = `Filename_${i}.jpg`;
-      window
-        .$('<img>')
-        .attr({
-          src: `/assets/projects/project-2/overall/IntegrationTemplates/360_assets/VansShoe/images/${fileName}`,
-        })
-        .appendTo('.hidden');
-    }
   }, []);
 
   const onHandleClick = (name) => {
