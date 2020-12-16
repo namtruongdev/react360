@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import { useCallback } from 'react';
 
-import './assets/js/imagerotator.js';
 import { initializeAPIDemo } from './assets/projects/project-1/overall/action';
 import license from './assets/projects/project-1/overall/published/license.lic';
 import './assets/projects/project-1/overall/published/imagerotator/html/css/round.css';
@@ -17,7 +16,7 @@ const App = () => {
     '/assets/projects/project-1/overall/published/imagerotator/html/img/round';
   viewer.settings.alt = '360 degree view ALT description';
   viewer.settings.googleEventTracking = false;
-  viewer.settings.apiReadyCallback = (api, isFullScreen) => {
+  viewer.settings.apiReadyCallback = useCallback((api, isFullScreen) => {
     if (!isFullScreen) {
       initializeAPIDemo(api);
     }
@@ -32,7 +31,7 @@ const App = () => {
         .appendTo('.hidden');
     }
     return false;
-  };
+  }, []);
 
   viewer.runImageRotator();
 

@@ -31,4 +31,5 @@ export const initializeAPIDemo = (api) => {
 
     api.reload(config.path, null, null, api.images.getCurrentImageIndex());
   });
+  return false;
 };
