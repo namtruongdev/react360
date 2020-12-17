@@ -48,6 +48,9 @@ const App = () => {
         className="wr360_player"
         style={{ backgroundColor: '#FFFFFF' }}
       ></section>
+
+      <img style={{ opacity: 0 }} id="popup" src="#" alt="popup" />
+
       <div className="hidden" style={{ display: 'block' }}></div>
     </>
   );
