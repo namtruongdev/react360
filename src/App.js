@@ -51,25 +51,27 @@ const App = () => {
 
       <img style={{ opacity: 0 }} id="popup" src="#" alt="popup" />
       <div className="floor-4" style={{ opacity: 0 }}>
-        <span
+        <div
           className="closeFloor4"
           style={{
-            fontSize: 30,
-            display: 'block',
-            width: 40,
-            height: 40,
-            textAlign: 'center',
-            lineHeight: 1,
+            fontSize: '1.5rem',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '20px',
             position: 'absolute',
-            borderRadius: '50%',
             top: 30,
             right: 30,
-            cursor: 'pointer',
+            borderRadius: '50%',
             boxShadow: '0px 0px 16px 0px rgba(0,0,0,0.75)',
+            cursor: 'pointer',
+            width: 30,
+            height: 30,
+            textAlign: 'center',
           }}
         >
-          &#9932;
-        </span>
+          <span>&#9932;</span>
+        </div>
         <img
           className="test"
           id="floor4-image"
