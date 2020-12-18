@@ -8,16 +8,16 @@
   </settings>
   <hotspots>
     <hotspot id="spot4" renderMode="0" indicatorImage="circ-cross-thin-orange.svg">
-      <spotinfo txt="Tầng 4" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);" clickAction="5" clickData="play" clickDataParam="4" />
+      <spotinfo txt="Tầng 4" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);transform:translateX(120px)" clickAction="5" clickData="play" clickDataParam="4" />
     </hotspot>
     <hotspot id="spot6" renderMode="0" indicatorImage="circ-cross-thin-blue.svg">
-      <spotinfo txt="Tầng 6" url="https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);" clickAction="5" clickData="play" clickDataParam="6" />
+      <spotinfo txt="Tầng 6" url="https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);transform:translateX(120px)" clickAction="5" clickData="play" clickDataParam="6" />
     </hotspot>
     <hotspot id="spot7" renderMode="0" indicatorImage="circ-cross-thin-red.svg">
-      <spotinfo txt="Tầng 7" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);" clickAction="5" clickData="play" clickDataParam="7" />
+      <spotinfo txt="Tầng 7" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);transform:translateX(120px)" clickAction="5" clickData="play" clickDataParam="7" />
     </hotspot>
     <hotspot id="spot8" renderMode="0" indicatorImage="circ-cross-thin-green.svg">
-      <spotinfo txt="Tầng 8" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);" clickAction="5" clickData="label2" clickDataParam="8" />
+      <spotinfo txt="Tầng 8" css="font-family:Arial;font-size:14px;color:#fff;width:200px;padding:15px 15px 16px 15px;border:1px solid rgb(59, 97, 142);border-radius:4px;background-color:rgba(59, 97, 142, 0.9);transform:translateX(120px)" clickAction="5" clickData="label2" clickDataParam="8" />
     </hotspot>
 
 

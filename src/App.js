@@ -102,7 +102,7 @@ const App = () => {
             target=""
             alt="family room"
             title="family room"
-            href="#"
+            href="https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html"
             coords="200,156,199,290,375,290,439,227,312,99,311,155"
             shape="poly"
             data-maphilight='{"strokeColor":"0000ff","strokeWidth":5,"fillColor":"ff0000","fillOpacity":0.6}'
