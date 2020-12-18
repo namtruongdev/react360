@@ -73,7 +73,6 @@ const App = () => {
           <span>&#9932;</span>
         </div>
         <img
-          className="test"
           id="floor4-image"
           src="assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/floorplan.jpg"
           useMap="#image-map"
