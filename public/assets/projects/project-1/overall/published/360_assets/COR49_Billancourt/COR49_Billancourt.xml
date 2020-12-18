@@ -17,32 +17,40 @@
     <hotspot id="spot3" renderMode="0" indicatorImage="circ-cross-thin-red.svg">
       <spotinfo css="font-family:Arial;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;" clickAction="5" clickData="play" clickDataParam="5" />
     </hotspot>
+      <hotspot id="spot4" renderMode="0" indicatorImage="circ-cross-thin-orange.svg">
+      <spotinfo css="font-family:Arial;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;" clickAction="5" clickData="play" clickDataParam="6" />
+    </hotspot>
   </hotspots>
   <images rows="1">
     <image src="images/0001.jpg">
       <hotspot source="spot1" offsetX="770" offsetY="430" />
       <hotspot source="spot2" offsetX="880" offsetY="259" />
       <hotspot source="spot3" offsetX="580" offsetY="359" />
+      <hotspot source="spot4" offsetX="770" offsetY="585" />
     </image>
     <image src="images/0002.jpg">
       <hotspot source="spot1" offsetX="750" offsetY="430" />
       <hotspot source="spot2" offsetX="855" offsetY="259" />
       <hotspot source="spot3" offsetX="600" offsetY="359" />
+      <hotspot source="spot4" offsetX="750" offsetY="585" />
     </image>
     <image src="images/0003.jpg">
       <hotspot source="spot1" offsetX="730" offsetY="430" />
       <hotspot source="spot2" offsetX="830" offsetY="259" />
       <hotspot source="spot3" offsetX="630" offsetY="359" />
+      <hotspot source="spot4" offsetX="730" offsetY="585" />
     </image>
     <image src="images/0004.jpg">
       <hotspot source="spot1" offsetX="710" offsetY="430" />
       <hotspot source="spot2" offsetX="800" offsetY="259" />
       <hotspot source="spot3" offsetX="670" offsetY="359" />
+      <hotspot source="spot4" offsetX="710" offsetY="577" />
     </image>
     <image src="images/0005.jpg">
       <hotspot source="spot1" offsetX="710" offsetY="430" />
       <hotspot source="spot2" offsetX="780" offsetY="259" />
       <hotspot source="spot3" offsetX="710" offsetY="359" />
+      <hotspot source="spot4" offsetX="710" offsetY="577" />
     </image>
     <image src="images/0006.jpg" />
     <image src="images/0007.jpg" />
@@ -72,57 +80,67 @@
       <hotspot source="spot1" offsetX="1130" offsetY="430" />
       <hotspot source="spot2" offsetX="1170" offsetY="259" />
       <hotspot source="spot3" offsetX="950" offsetY="359" />
+      <hotspot source="spot4" offsetX="1130" offsetY="590" />
     </image>
     <image src="images/0031.jpg">
       <hotspot source="spot1" offsetX="1110" offsetY="430" />
       <hotspot source="spot2" offsetX="1160" offsetY="259" />
       <hotspot source="spot3" offsetX="880" offsetY="359" />
+      <hotspot source="spot4" offsetX="1110" offsetY="590" />
     </image>
     <image src="images/0032.jpg">
       <hotspot source="spot1" offsetX="1100" offsetY="430" />
       <hotspot source="spot2" offsetX="1140" offsetY="259" />
       <hotspot source="spot3" offsetX="800" offsetY="359" />
+      <hotspot source="spot4" offsetX="1100" offsetY="590" />
     </image>
     <image src="images/0033.jpg">
       <hotspot source="spot1" offsetX="1040" offsetY="430" />
       <hotspot source="spot2" offsetX="1120" offsetY="259" />
       <hotspot source="spot3" offsetX="730" offsetY="359" />
+      <hotspot source="spot4" offsetX="1040" offsetY="590" />
     </image>
     <image src="images/0034.jpg">
-
       <hotspot source="spot1" offsetX="1000" offsetY="430" />
       <hotspot source="spot2" offsetX="1100" offsetY="259" />
       <hotspot source="spot3" offsetX="680" offsetY="359" />
+      <hotspot source="spot4" offsetX="1000" offsetY="589" />
     </image>
     <image src="images/0035.jpg">
       <hotspot source="spot1" offsetX="960" offsetY="430" />
       <hotspot source="spot2" offsetX="1080" offsetY="259" />
       <hotspot source="spot3" offsetX="630" offsetY="359" />
+      <hotspot source="spot4" offsetX="960" offsetY="589" />
     </image>
     <image src="images/0036.jpg">
       <hotspot source="spot1" offsetX="920" offsetY="430" />
       <hotspot source="spot2" offsetX="1040" offsetY="259" />
       <hotspot source="spot3" offsetX="590" offsetY="359" />
+      <hotspot source="spot4" offsetX="920" offsetY="590" />
     </image>
     <image src="images/0037.jpg">
       <hotspot source="spot1" offsetX="880" offsetY="430" />
       <hotspot source="spot2" offsetX="1000" offsetY="259" />
       <hotspot source="spot3" offsetX="570" offsetY="359" />
+      <hotspot source="spot4" offsetX="880" offsetY="590" />
     </image>
     <image src="images/0038.jpg">
       <hotspot source="spot1" offsetX="840" offsetY="430" />
       <hotspot source="spot2" offsetX="960" offsetY="259" />
       <hotspot source="spot3" offsetX="550" offsetY="359" />
+      <hotspot source="spot4" offsetX="840" offsetY="587" />
     </image>
     <image src="images/0039.jpg">
       <hotspot source="spot1" offsetX="810" offsetY="430" />
       <hotspot source="spot2" offsetX="930" offsetY="259" />
       <hotspot source="spot3" offsetX="550" offsetY="359" />
+      <hotspot source="spot4" offsetX="810" offsetY="585" />
     </image>
     <image src="images/0040.jpg">
       <hotspot source="spot1" offsetX="780" offsetY="430" />
       <hotspot source="spot2" offsetX="910" offsetY="259" />
       <hotspot source="spot3" offsetX="560" offsetY="359" />
+      <hotspot source="spot4" offsetX="780" offsetY="585" />
     </image>
   </images>
 </config>
