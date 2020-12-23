@@ -6,6 +6,7 @@ import './assets/projects/project-1/overall/published/imagerotator/html/css/roun
 
 import Menu from './component/menu';
 import SwitchBtn from './component/SwitchBtn';
+import close from './assets/images/close.svg';
 
 const App = () => {
   const viewer = window.WR360.ImageRotator.Create('wr360PlayerId');
@@ -48,7 +49,16 @@ const App = () => {
         className="wr360_player"
         style={{ backgroundColor: '#FFFFFF' }}
       ></section>
-
+      <map name="pic-0">
+        <area
+          target=""
+          alt=""
+          title=""
+          href="#"
+          coords="1142,370,913,365,447,365,445,398,418,404,420,429,715,436,800,441,834,443,908,441,1108,437,1169,437,1188,424,1190,404,1142,404"
+          shape="poly"
+        />
+      </map>
       <img style={{ opacity: 0 }} id="popup" src="#" alt="popup" />
       <div className="floor-4" style={{ opacity: 0 }}>
         <div
@@ -70,7 +80,9 @@ const App = () => {
             textAlign: 'center',
           }}
         >
-          <span>&#9932;</span>
+          <span>
+            <img style={{ width: 20 }} src={close} alt="close" />
+          </span>
         </div>
         <img
           id="floor4-image"
