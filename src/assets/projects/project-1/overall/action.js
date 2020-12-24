@@ -1,4 +1,8 @@
 export const initializeAPIDemo = (api) => {
+  window.$(function () {
+    window.$('#floor4-image').maphilight();
+  });
+
   let config = {
     status: false,
     path:
@@ -53,9 +57,7 @@ export const initializeAPIDemo = (api) => {
           floor4.style.transform = 'translateY(-50%)';
           floor4.style.zIndex = '11';
           floor4.style.opacity = 1;
-          window.$(function () {
-            window.$('#floor4-image').maphilight();
-          });
+
           closeFloor4.addEventListener('click', () => {
             floor4.style.opacity = '0';
             switchBtn.style.display = 'block';
