@@ -5,16 +5,14 @@ export const initializeAPIDemo = (api) => {
 
   let config = {
     status: false,
-    path:
-      '/assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/COR49_Billancourt.xml',
+    path: '/assets/projects/project-1/overall/COR49_Billancourt.xml',
   };
   const switchBtn = document.querySelector('#switchBtn');
   switchBtn.addEventListener('click', (e) => {
     e.preventDefault();
     if (config.status) {
       config.status = false;
-      config.path =
-        '/assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/COR49_Billancourt.xml';
+      config.path = '/assets/projects/project-1/overall/COR49_Billancourt.xml';
     } else {
       config.status = true;
       config.path =
@@ -79,8 +77,7 @@ export const initializeAPIDemo = (api) => {
           const img = document.querySelector('#popup');
           switchBtn.style.display = 'none';
           menu.style.display = 'none';
-          img.src =
-            '/assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0001-hover.jpg';
+          img.src = '/assets/projects/project-1/overall/images/0001-hover.jpg';
           img.style.transition = 'opacity 1s ease';
           img.style.width = '100vw';
           img.style.position = 'absolute';
@@ -152,8 +149,7 @@ export const initializeAPIDemo = (api) => {
     const img = document.querySelector('#popup');
     switchBtn.style.display = 'none';
     menu.style.display = 'none';
-    img.src =
-      '/assets/projects/project-1/overall/published/360_assets/COR49_Billancourt/images/0001-hover.jpg';
+    img.src = '/assets/projects/project-1/overall/images/0001-hover.jpg';
     img.style.transition = 'opacity 1s ease';
     img.style.width = '100vw';
     img.style.position = 'absolute';
