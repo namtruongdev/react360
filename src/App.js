@@ -5,7 +5,6 @@ import license from './assets/projects/project-3/general/license.lic';
 import './assets/projects/project-1/overall/assets/css/round.css';
 
 import Menu from './components/Menu';
-import SwitchBtn from './components/SwitchBtn';
 // import Floor4 from './assets/projects/project-1/overall/components/Floor4';
 // import Floor7 from './assets/projects/project-1/overall/components/Floor7';
 
@@ -49,7 +48,6 @@ const App = () => {
 
   return (
     <>
-      <SwitchBtn />
       <Menu className="menu" onHandleClick={onHandleClick} />
       <section
         id="wr360PlayerId"

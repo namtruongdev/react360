@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <preloader image="images/0001.jpg" />
+    <userInterface showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="#FFFFFF" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0.59" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="true" fullScreenBackColor="#FFFFFF" />
+    <control dragSpeed="0.13" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="true" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" />
+    <rotation firstImage="33" rotate="false" rotatePeriod="7" bounce="false" rotateDirection="-1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" />
+  </settings>
+  <hotspots>
+    <hotspot id="spot0" renderMode="0" indicatorImage="circ-cross-thin-blue.svg">
+      <spotinfo css="font-family:Arial;font-size:14px;color:#333333;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;background-color:rgba(255,255,255,0.97);" clickAction="5" clickData="play" clickDataParam="2" />
+    </hotspot>
+    <hotspot id="spot1" renderMode="0" indicatorImage="circ-cross-thin-green.svg">
+      <spotinfo css="font-family:Arial;font-size:14px;color:#333333;width:200px;padding:15px 15px 16px 15px;border:1px solid #E0E0E0;border-radius:4px;background-color:rgba(255,255,255,0.97);" clickAction="5" clickData="label2" clickDataParam="2" />
+    </hotspot>
+  </hotspots>
+  <images rows="1" highresWidth="1566" highresHeight="1032">
+    <image src="images/0001.jpg" />
+    <image src="images/0002.jpg" />
+    <image src="images/0003.jpg" />
+    <image src="images/0004.jpg" />
+    <image src="images/0005.jpg" />
+    <image src="images/0006.jpg" />
+    <image src="images/0007.jpg" />
+    <image src="images/0008.jpg" />
+    <image src="images/0009.jpg" />
+    <image src="images/0010.jpg" />
+    <image src="images/0011.jpg" />
+    <image src="images/0012.jpg" />
+    <image src="images/0013.jpg" />
+    <image src="images/0014.jpg" />
+    <image src="images/0015.jpg" />
+    <image src="images/0016.jpg" />
+    <image src="images/0017.jpg" />
+    <image src="images/0018.jpg" />
+    <image src="images/0019.jpg" />
+    <image src="images/0020.jpg" />
+    <image src="images/0021.jpg" />
+    <image src="images/0022.jpg" />
+    <image src="images/0023.jpg" />
+    <image src="images/0024.jpg" />
+    <image src="images/0025.jpg" />
+    <image src="images/0026.jpg" />
+    <image src="images/0027.jpg" />
+    <image src="images/0028.jpg" />
+    <image src="images/0029.jpg" />
+    <image src="images/0030.jpg" />
+    <image src="images/0031.jpg" />
+    <image src="images/0032.jpg" />
+    <image src="images/0033.jpg" />
+    <image src="images/0034.jpg" />
+    <image src="images/0035.jpg" />
+    <image src="images/0036.jpg" />
+    <image src="images/0037.jpg" />
+    <image src="images/0038.jpg" />
+    <image src="images/0039.jpg" />
+    <image src="images/0040.jpg" />
+  </images>
+</config>
