@@ -77,9 +77,9 @@ const Menu = ({ onHandleClick }) => {
   const links = useMemo(
     () => [
       {
-        name: 'Toiture',
+        name: 'Snow',
         to: '#',
-        className: 'topli active',
+        className: 'topli',
       },
       {
         name: 'Floor 8',
@@ -127,9 +127,9 @@ const Menu = ({ onHandleClick }) => {
         className: '',
       },
       {
-        name: 'RDC',
+        name: 'General',
         to: '#',
-        className: 'bottomli',
+        className: 'bottomli active',
       },
     ],
     []
@@ -138,7 +138,7 @@ const Menu = ({ onHandleClick }) => {
   const [activeLink, setActiveLink] = useState(null);
 
   useEffect(() => {
-    links[0].className = 'topli';
+    links[10].className = 'bottomli';
   }, [links]);
 
   const handleClick = (name) => {

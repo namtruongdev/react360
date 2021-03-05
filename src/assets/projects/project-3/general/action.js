@@ -11,7 +11,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn0 = document.querySelector('#floor0');
   switchBtn0.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/general/config.xml';
+    config.path = '/assets/projects/project-3/floor/Snow/360_assets/Snow.xml';
     api.reload(
       config.path,
       null,
@@ -34,7 +34,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn1 = document.querySelector('#floor1');
   switchBtn1.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor8/360_assets/Floor8.xml';
+    config.path = '/assets/projects/project-3/floor/Floor8/360_assets/Floor8.xml';
     api.reload(
       config.path,
       null,
@@ -57,7 +57,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn2 = document.querySelector('#floor2');
   switchBtn2.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor7/360_assets/Floor7.xml';
+    config.path = '/assets/projects/project-3/floor/Floor7/360_assets/Floor7.xml';
     api.reload(
       config.path,
       null,
@@ -80,7 +80,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn3 = document.querySelector('#floor3');
   switchBtn3.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor6/360_assets/Floor6.xml';
+    config.path = '/assets/projects/project-3/floor/Floor6/360_assets/Floor6.xml';
     api.reload(
       config.path,
       null,
@@ -103,7 +103,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn4 = document.querySelector('#floor4');
   switchBtn4.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor5/360_assets/Floor5.xml';
+    config.path = '/assets/projects/project-3/floor/Floor5/360_assets/Floor5.xml';
     api.reload(
       config.path,
       null,
@@ -126,7 +126,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn5 = document.querySelector('#floor5');
   switchBtn5.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor4/360_assets/Floor4.xml';
+    config.path = '/assets/projects/project-3/floor/Floor4/360_assets/Floor4.xml';
     api.reload(
       config.path,
       null,
@@ -149,7 +149,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn6 = document.querySelector('#floor6');
   switchBtn6.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor3/360_assets/Floor3.xml';
+    config.path = '/assets/projects/project-3/floor/Floor3/360_assets/Floor3.xml';
     api.reload(
       config.path,
       null,
@@ -172,7 +172,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn7 = document.querySelector('#floor7');
   switchBtn7.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor2/360_assets/Floor2.xml';
+    config.path = '/assets/projects/project-3/floor/Floor2/360_assets/Floor2.xml';
     api.reload(
       config.path,
       null,
@@ -195,7 +195,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn8 = document.querySelector('#floor8');
   switchBtn8.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor1/360_assets/Floor1.xml';
+    config.path = '/assets/projects/project-3/floor/Floor1/360_assets/Floor1.xml';
     api.reload(
       config.path,
       null,
@@ -218,7 +218,7 @@ export const initializeAPIDemo = (api) => {
   const switchBtn9 = document.querySelector('#floor9');
   switchBtn9.addEventListener('click', (e) => {
     e.preventDefault();
-    config.path = '/assets/projects/project-3/Floor/Floor0/360_assets/Floor0.xml';
+    config.path = '/assets/projects/project-3/floor/Floor0/360_assets/Floor0.xml';
     api.reload(
       config.path,
       null,
