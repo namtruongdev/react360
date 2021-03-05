@@ -82,22 +82,47 @@ const Menu = ({ onHandleClick }) => {
         className: 'topli active',
       },
       {
-        name: 'R+4',
+        name: 'Floor 8',
         to: '#',
         className: '',
       },
       {
-        name: 'R+3',
+        name: 'Floor 7',
         to: '#',
         className: '',
       },
       {
-        name: 'R+2',
+        name: 'Floor 6',
         to: '#',
         className: '',
       },
       {
-        name: 'R+1',
+        name: 'Floor 5',
+        to: '#',
+        className: '',
+      },
+      {
+        name: 'Floor 4',
+        to: '#',
+        className: '',
+      },
+      {
+        name: 'Floor 3',
+        to: '#',
+        className: '',
+      },
+      {
+        name: 'Floor 2',
+        to: '#',
+        className: '',
+      },
+      {
+        name: 'Floor 1',
+        to: '#',
+        className: '',
+      },
+      {
+        name: 'Floor 0',
         to: '#',
         className: '',
       },

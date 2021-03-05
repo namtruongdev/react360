@@ -7,9 +7,35 @@ export const initializeAPIDemo = (api) => {
     status: false,
     path: '/assets/projects/project-3/general/config.xml',
   };
-  const switchBtn = document.querySelector('#floor1');
-  switchBtn.addEventListener('click', (e) => {
-    console.log('hihi');
+
+  const switchBtn0 = document.querySelector('#floor0');
+  switchBtn0.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn1 = document.querySelector('#floor1');
+  switchBtn1.addEventListener('click', (e) => {
     e.preventDefault();
     if (config.status) {
       config.status = false;
@@ -17,156 +43,299 @@ export const initializeAPIDemo = (api) => {
     } else {
       config.status = true;
       config.path =
-        '/assets/projects/project-2/overall/IntegrationTemplates/360_assets/VansShoe/VansShoe.xml';
+        '/assets/projects/project-3/Floor/Floor8/360_assets/Floor8.xml';
     }
     api.reload(
       config.path,
       null,
       () => {
-        const menu = document.querySelector('#menu');
-        const spot4 = document.querySelector(
-          '#wr360DynamicSpot_spot4_wr360PlayerId'
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
         );
-        const spot6 = document.querySelector(
-          '#wr360DynamicSpot_spot6_wr360PlayerId'
-        );
-        const spot7 = document.querySelector(
-          '#wr360DynamicSpot_spot7_wr360PlayerId'
-        );
-        // const spot8 = document.querySelector(
-        //   '#wr360DynamicSpot_spot8_wr360PlayerId'
-        // );
 
-        spot4.addEventListener('click', (e) => {
-          e.preventDefault();
-          const floor4 = document.querySelector('.floor-4');
-          const closeFloor4 = document.querySelector('.closeFloor4');
-          switchBtn.style.display = 'none';
-          menu.style.display = 'none';
-          floor4.style.background = '#fff';
-          floor4.style.display = 'flex';
-          floor4.style.justifyContent = 'center';
-          floor4.style.alignItems = 'center';
-          floor4.style.width = '100vw';
-          floor4.style.height = '100vh';
-          floor4.style.transition = 'opacity 1s ease';
-          floor4.style.position = 'absolute';
-          floor4.style.left = '0';
-          floor4.style.top = '50%';
-          floor4.style.transform = 'translateY(-50%)';
-          floor4.style.zIndex = '11';
-          floor4.style.opacity = 1;
-
-          closeFloor4.addEventListener('click', () => {
-            floor4.style.opacity = '0';
-            switchBtn.style.display = 'block';
-            menu.style.display = 'block';
-            setTimeout(() => {
-              floor4.style.zIndex = -1;
-            }, 1000);
-          });
-        });
-
-        spot6.addEventListener('click', (e) => {
+        spot0.addEventListener('click', (e) => {
           e.preventDefault();
           window.location.assign(
             'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
           );
-        });
-
-        spot7.addEventListener('click', () => {
-          const img = document.querySelector('#popup');
-          switchBtn.style.display = 'none';
-          menu.style.display = 'none';
-          img.src = '/assets/projects/project-1/overall/images/0001-hover.jpg';
-          img.style.transition = 'opacity 1s ease';
-          img.style.width = '100vw';
-          img.style.position = 'absolute';
-          img.style.left = '0';
-          img.style.top = '50%';
-          img.style.transform = 'translateY(-50%)';
-          img.style.zIndex = '11';
-          img.style.opacity = 1;
-          img.style.cursor = 'pointer';
-          img.addEventListener('click', () => {
-            img.style.opacity = '0';
-            switchBtn.style.display = 'block';
-            menu.style.display = 'block';
-            setTimeout(() => {
-              img.src = '#';
-            }, 1000);
-          });
         });
       },
       api.images.getCurrentImageIndex()
     );
   });
 
-  const menu = document.querySelector('#menu');
-  const spot4 = document.querySelector('#wr360DynamicSpot_spot4_wr360PlayerId');
-  const spot6 = document.querySelector('#wr360DynamicSpot_spot6_wr360PlayerId');
-  const spot7 = document.querySelector('#wr360DynamicSpot_spot7_wr360PlayerId');
-  // const spot8 = document.querySelector('#wr360DynamicSpot_spot8_wr360PlayerId');
-
-  spot4.addEventListener('click', (e) => {
+  const switchBtn2 = document.querySelector('#floor2');
+  switchBtn2.addEventListener('click', (e) => {
     e.preventDefault();
-    const floor4 = document.querySelector('.floor-4');
-    const closeFloor4 = document.querySelector('.closeFloor4');
-    switchBtn.style.display = 'none';
-    menu.style.display = 'none';
-    floor4.style.background = '#fff';
-    floor4.style.display = 'flex';
-    floor4.style.justifyContent = 'center';
-    floor4.style.alignItems = 'center';
-    floor4.style.width = '100vw';
-    floor4.style.height = '100vh';
-    floor4.style.transition = 'opacity 1s ease';
-    floor4.style.position = 'absolute';
-    floor4.style.left = '0';
-    floor4.style.top = '50%';
-    floor4.style.transform = 'translateY(-50%)';
-    floor4.style.zIndex = '11';
-    floor4.style.opacity = 1;
-    window.$(function () {
-      window.$('#floor4-image').maphilight();
-    });
-    closeFloor4.addEventListener('click', () => {
-      floor4.style.opacity = '0';
-      switchBtn.style.display = 'block';
-      menu.style.display = 'block';
-      setTimeout(() => {
-        floor4.style.zIndex = -1;
-      }, 1000);
-    });
-  });
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor7/360_assets/Floor7.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
 
-  spot6.addEventListener('click', () => {
-    window.location.assign(
-      'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
     );
   });
 
-  spot7.addEventListener('click', () => {
-    const img = document.querySelector('#popup');
-    switchBtn.style.display = 'none';
-    menu.style.display = 'none';
-    img.src = '/assets/projects/project-1/overall/images/0001-hover.jpg';
-    img.style.transition = 'opacity 1s ease';
-    img.style.width = '100vw';
-    img.style.position = 'absolute';
-    img.style.left = '0';
-    img.style.top = '50%';
-    img.style.transform = 'translateY(-50%)';
-    img.style.zIndex = '11';
-    img.style.opacity = 1;
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
-      img.style.opacity = '0';
-      switchBtn.style.display = 'block';
-      menu.style.display = 'block';
-      setTimeout(() => {
-        img.src = '#';
-      }, 1000);
-    });
+  const switchBtn3 = document.querySelector('#floor3');
+  switchBtn3.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor6/360_assets/Floor6.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn4 = document.querySelector('#floor4');
+  switchBtn4.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor5/360_assets/Floor5.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn5 = document.querySelector('#floor5');
+  switchBtn5.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor4/360_assets/Floor4.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn6 = document.querySelector('#floor6');
+  switchBtn6.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor3/360_assets/Floor3.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn7 = document.querySelector('#floor7');
+  switchBtn7.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor2/360_assets/Floor2.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn8 = document.querySelector('#floor8');
+  switchBtn8.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor1/360_assets/Floor1.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn9 = document.querySelector('#floor9');
+  switchBtn9.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    } else {
+      config.status = true;
+      config.path =
+        '/assets/projects/project-3/Floor/Floor0/360_assets/Floor0.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+  const switchBtn10 = document.querySelector('#floor10');
+  switchBtn10.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (config.status) {
+      config.status = false;
+      config.path = '/assets/projects/project-3/general/config.xml';
+    }
+    api.reload(
+      config.path,
+      null,
+      () => {
+        const spot0 = document.querySelector(
+          '#wr360DynamicSpot_spot0_wr360PlayerId'
+        );
+
+        spot0.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.assign(
+            'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+          );
+        });
+      },
+      api.images.getCurrentImageIndex()
+    );
+  });
+
+
+  const spot0 = document.querySelector('#wr360DynamicSpot_spot0_wr360PlayerId');
+
+  spot0.addEventListener('click', () => {
+    window.location.assign(
+      'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+    );
   });
 };
