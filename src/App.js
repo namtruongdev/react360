@@ -1,19 +1,19 @@
 import { useCallback } from 'react';
 
-import { initializeAPIDemo } from './assets/projects/project-1/overall/action';
-import license from './assets/projects/project-1/overall/license.lic';
+import { initializeAPIDemo } from './assets/projects/project-3/general/action.js';
+import license from './assets/projects/project-3/general/license.lic';
 import './assets/projects/project-1/overall/assets/css/round.css';
 
 import Menu from './components/Menu';
 import SwitchBtn from './components/SwitchBtn';
-import Floor4 from './assets/projects/project-1/overall/components/Floor4';
-import Floor7 from './assets/projects/project-1/overall/components/Floor7';
+// import Floor4 from './assets/projects/project-1/overall/components/Floor4';
+// import Floor7 from './assets/projects/project-1/overall/components/Floor7';
 
 const App = () => {
   const viewer = window.WR360.ImageRotator.Create('wr360PlayerId');
   viewer.licenseFileURL = license;
   viewer.settings.configFileURL =
-    '/assets/projects/project-1/overall/COR49_Billancourt.xml';
+    '/assets/projects/project-3/general/config.xml';
   viewer.settings.graphicsPath =
     '/assets/projects/project-1/overall/assets/img/round';
   viewer.settings.alt = '360 degree view ALT description';
@@ -50,14 +50,14 @@ const App = () => {
   return (
     <>
       <SwitchBtn />
-      <Menu onHandleClick={onHandleClick} />
+      <Menu className="menu" onHandleClick={onHandleClick} />
       <section
         id="wr360PlayerId"
         className="wr360_player"
         style={{ backgroundColor: '#FFFFFF' }}
       ></section>
-      <Floor7 />
-      <Floor4 />
+      {/* <Floor7 />
+      <Floor4 /> */}
       <div className="preload" style={{ display: 'block' }}></div>
     </>
   );

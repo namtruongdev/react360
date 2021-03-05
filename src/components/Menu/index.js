@@ -124,13 +124,14 @@ const Menu = ({ onHandleClick }) => {
   return (
     <MenuContainers id="menu">
       <List>
-        {links.map((link) => (
+        {links.map((link, index) => (
           <Item
             key={link.name}
             onClick={() => handleClick(link.name)}
             className={
               link.className + (link.name === activeLink ? ' active' : '')
             }
+            id={`floor${index}`}
           >
             <Link href={link.to}>{link.name}</Link>
           </Item>
