@@ -9,14 +9,20 @@ const MenuContainers = styled.div`
   border-radius: 20px;
   background-color: white;
   z-index: 11111111111;
+  .floor-toogle {
+    position: absolute;
+    bottom: -40px;
+    border: none;
+    background: rgb(5,167,173);
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+  }
 `;
 
 const List = styled.ul`
   padding: 0;
   margin: 0;
-  @media (max-width: 739px) {
-    display: flex;
-  }
 `;
 
 const Link = styled.a`
@@ -50,7 +56,7 @@ const Item = styled.li`
   @media (max-width: 399px) {
     ${Link} {
       font-size: 14px;
-      min-width: 50px;
+      min-width: 55px;
     }
   }
   &.active {
@@ -68,12 +74,13 @@ const borderRadiusLarge = (className) => {
 };
 
 const borderRadiusSmall = (className) => {
-  if (className.includes('topli')) return '20px 0px 0px 20px';
-  else if (className.includes('bottomli')) return '0px 20px 20px 0px';
+  if (className.includes('topli')) return '20px 20px 0px 0px';
+  else if (className.includes('bottomli')) return '0px 0px 20px 20px';
   else return '0px';
 };
 
 const Menu = ({ onHandleClick }) => {
+  const [toggle, setToggle] = useState(false)
   const links = useMemo(
     () => [
       {
@@ -146,9 +153,12 @@ const Menu = ({ onHandleClick }) => {
     onHandleClick(name);
   };
 
+  const toggleButton = () => setToggle(value => !value)
+
   return (
     <MenuContainers id="menu">
-      <List>
+      <button className="floor-toogle" onClick={toggleButton}>Floor</button>
+      {toggle && (<List>
         {links.map((link, index) => (
           <Item
             key={link.name}
@@ -162,6 +172,7 @@ const Menu = ({ onHandleClick }) => {
           </Item>
         ))}
       </List>
+      )}
     </MenuContainers>
   );
 };
