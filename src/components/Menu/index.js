@@ -2,12 +2,9 @@ import React, { useEffect, useState, useMemo, memo } from 'react';
 import styled from 'styled-components';
 
 const MenuContainers = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
   position: fixed;
   bottom: 95px;
   left: 15px;
-  border-radius: 20px;
-  background-color: white;
   z-index: 11111111111;
   .floor-toogle {
     position: absolute;
@@ -24,6 +21,10 @@ const MenuContainers = styled.div`
 const List = styled.ul`
   padding: 0;
   margin: 0;
+  visibility: ${(props) => (props.visible ? 'visible' : 'hidden')};
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
 `;
 
 const Link = styled.a`
@@ -161,22 +162,21 @@ const Menu = ({ onHandleClick }) => {
       <button className="floor-toogle" onClick={toggleButton}>
         Floor
       </button>
-      {toggle && (
-        <List>
-          {links.map((link, index) => (
-            <Item
-              key={link.name}
-              onClick={() => handleClick(link.name)}
-              className={
-                link.className + (link.name === activeLink ? ' active' : '')
-              }
-              id={`floor${index}`}
-            >
-              <Link href={link.to}>{link.name}</Link>
-            </Item>
-          ))}
-        </List>
-      )}
+
+      <List visible={toggle}>
+        {links.map((link, index) => (
+          <Item
+            key={link.name}
+            onClick={() => handleClick(link.name)}
+            className={
+              link.className + (link.name === activeLink ? ' active' : '')
+            }
+            id={`floor${index}`}
+          >
+            <Link href={link.to}>{link.name}</Link>
+          </Item>
+        ))}
+      </List>
     </MenuContainers>
   );
 };

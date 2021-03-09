@@ -179,6 +179,7 @@ export const initializeAPIDemo = (api) => {
   });
 
   const switchBtn6 = document.querySelector('#floor6');
+
   switchBtn6.addEventListener('click', (e) => {
     e.preventDefault();
     config.path =
