@@ -7,7 +7,10 @@ export const initializeAPIDemo = (api) => {
     status: false,
     path: '/assets/projects/project-3/general/config.xml',
   };
+
   const switchBtn0 = document.querySelector('#floor0');
+  const overlay = document.querySelector('#overlay');
+
   switchBtn0.addEventListener('click', (e) => {
     e.preventDefault();
     config.path = '/assets/projects/project-3/floor/Snow/360_assets/Snow.xml';
@@ -36,6 +39,7 @@ export const initializeAPIDemo = (api) => {
 
   const switchBtn1 = document.querySelector('#floor1');
   switchBtn1.addEventListener('click', (e) => {
+    overlay.style.display = 'block';
     e.preventDefault();
     config.path =
       '/assets/projects/project-3/floor/Floor8/360_assets/Floor8.xml';
@@ -44,6 +48,7 @@ export const initializeAPIDemo = (api) => {
         config.path,
         null,
         () => {
+          overlay.style.display = 'none';
           const spot0 = document.querySelector(
             '#wr360DynamicSpot_spot0_wr360PlayerId'
           );

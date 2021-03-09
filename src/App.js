@@ -118,7 +118,7 @@ const App = () => {
   viewer.runImageRotator();
 
   const onHandleClick = (name) => {
-    console.log(name);
+    // console.log(name);
   };
 
   return (
@@ -132,6 +132,19 @@ const App = () => {
       {/* <Floor7 />
       <Floor4 /> */}
       <div className="preload" style={{ display: 'block' }}></div>
+      <div
+        id="overlay"
+        style={{
+          background: 'transparent',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: '9999',
+          display: 'none',
+        }}
+      ></div>
     </>
   );
 };
