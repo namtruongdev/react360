@@ -14,7 +14,7 @@ export const initializeAPIDemo = (api) => {
   switchBtn0.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     e.preventDefault();
-    config.path = '/assets/projects/project-3/floor/Snow/360_assets/Snow.xml';
+    config.path = '/assets/projects/project-3/snow/360_assets/Snow.xml';
     try {
       api.reload(
         config.path,
