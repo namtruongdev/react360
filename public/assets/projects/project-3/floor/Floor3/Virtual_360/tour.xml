@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<krpano version="1.19" title="[%TITLE%]">
+  <include url="skin/vtourskin.xml"/>
+  <skin_settings maps="false" maps_type="google" maps_bing_api_key="" maps_google_api_key="" maps_zoombuttons="false" gyro="true" webvr="true" webvr_gyro_keeplookingdirection="false" webvr_prev_next_hotspots="true" littleplanetintro="false" title="true" thumbs="true" thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160" thumbs_opened="false" thumbs_text="true" thumbs_dragging="true" thumbs_onhoverscrolling="false" thumbs_scrollbuttons="false" thumbs_scrollindicator="false" thumbs_loop="false" tooltips_buttons="false" tooltips_thumbs="false" tooltips_hotspots="true" tooltips_mapspots="true" deeplinking="false" loadscene_flags="MERGE" loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)" loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)" loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)" loadingtext="loading..." layout_width="100%" layout_maxwidth="814" controlbar_width="-24" controlbar_height="40" controlbar_offset="20" controlbar_offset_closed="-40" controlbar_overlap.no-fractionalscaling="10" controlbar_overlap.fractionalscaling="0" design_skin_images="vtourskin.png" design_bgcolor="0x2D3E50" design_bgalpha="0.8" design_bgborder="0" design_bgroundedge="1" design_bgshadow="0 4 10 0x000000 0.3" design_thumbborder_bgborder="3 0xFFFFFF 1.0" design_thumbborder_padding="2" design_thumbborder_bgroundedge="0" design_text_css="color:#FFFFFF; font-family:Arial;" design_text_shadow="1" isVR="false" actualMap="1" numberOfMap="1" numberOfHotspot="7"/>
+  <action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+  <action name="LoadMap">for(set(i,1), i LE skin_settings.numberOfHotspot , inc(i),
+	txtadd(tmp, "spot", get(i));
+	set(baseXML, get(xml.scene));
+	set(toSearch, get(layer[get(tmp)].linkedscene));
+	toupper(baseXML);
+	toupper(toSearch);
+	if(toSearch EQ baseXML,
+		set(layer[activespot].parent, get(tmp));
+		set(parent, get(layer[get(tmp)].parent));
+		for(set(j,0), j LT skin_settings.numberOfMap , inc(j),
+			txtadd(tmpMap, "Maps000", get(j));
+			if(tmpMap == parent,
+				set(layer[get(tmpMap)].visible, true);
+				set(skin_settings.actualMap, get(j));
+			,
+				set(layer[get(tmpMap)].visible, false);
+			);
+			
+		);
+	);
+);</action>
+  <action name="mapspot_loadscene">if(layer[Maps].scale GT 0.25,
+    set(layer[Maps].enabled, false);
+    tween(layer[Maps].alpha, 0.0, 0.25, default,
+        loadscene(%1, null, MERGE, BLEND(1));
+        set(layer[Maps].onclick, openmap(); );
+        layer[Maps].changeorigin(righttop,righttop);
+        set(layer[Maps].x, 0);
+        set(layer[Maps].y, 0);
+        set(layer[Maps].width, 1024);
+        set(layer[Maps].scale, 0.25);
+        set(events[sceneload].onloadcomplete,delayedcall(1,tween(layer[Maps].alpha, 1.0, 0.5, default, set(layer[Maps].enabled, true); );););
+    );
+,
+    loadscene(%1, null, MERGE, BLEND(1));
+    set(layer[activespot].parent, %2);
+);
+for(set(j,0), j LE skin_settings.numberOfMap , inc(j),
+    txtadd(tmpMap, "Maps000" get(j));   
+    if(layer[%2].parent EQ tmpMap, 
+        set(layer[tmpMap].visible, true);
+    ,
+        set(layer[tmpMap].visible, false);
+    )
+);</action>
+  <action name="openmap">set(layer[Maps].onclick, closemap(); );
+layer[Maps].changeorigin(center,center);
+set(bigscale,1); 
+if(layer[Maps].imagewidth GT stagewidth, 
+    div(bigscale, stagewidth, layer[Maps].imagewidth);
+);
+tween(layer[Maps].x, 0);
+tween(layer[Maps].y, 0);
+tween(layer[Maps].width, 2048);
+tween(layer[Maps].scale, get(bigscale));</action>
+  <action name="closemap">set(layer[Maps].onclick, openmap(); );
+layer[Maps].changeorigin(righttop,righttop); 
+tween(layer[Maps].x, 0); 
+tween(layer[Maps].y, 0);
+tween(layer[Maps].width, 1024);
+tween(layer[Maps].scale, 0.25);</action>
+  <action name="showmap">set(actualVisibility, get(layer[Maps].visible));
+if(actualVisibility, 
+	set(layer[Maps].visible, false);
+	set(layer[PlusMinusMap].crop, "0|320|64|64");
+,
+	set(layer[Maps].visible, true);
+	set(layer[PlusMinusMap].crop, "64|320|64|64");
+);</action>
+  <scene name="scene_0001" title="Salon" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0001.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0001.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0001.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0001.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="-127.22957101224023" atv="0" linkedscene="scene_0002"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="-122.22957101224023" atv="0" html="Cuisine" linkedscene="scene_0002"/>
+    <hotspot name="spot1" style="skin_hotspotstyle" ath="-68.61108656847863" atv="0" linkedscene="scene_0003"/>
+    <hotspot name="spotVR1" style="skin_hotspotstyle_Text" ath="-63.611086568478626" atv="0" html="Hall" linkedscene="scene_0003"/>
+    <hotspot name="spot2" style="skin_hotspotstyle" ath="-91.41792893313692" atv="0" linkedscene="scene_0007"/>
+    <hotspot name="spotVR2" style="skin_hotspotstyle_Text" ath="-86.41792893313692" atv="0" html="Entree" linkedscene="scene_0007"/>
+  </scene>
+  <scene name="scene_0002" title="Cuisine" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0002.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0002.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0002.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0002.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="49.411374173916364" atv="0" linkedscene="scene_0001"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="54.411374173916364" atv="0" html="Salon" linkedscene="scene_0001"/>
+  </scene>
+  <scene name="scene_0003" title="Hall" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0003.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0003.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0003.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0003.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="88.70127631012768" atv="0" linkedscene="scene_0001"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="93.70127631012768" atv="0" html="Salon" linkedscene="scene_0001"/>
+    <hotspot name="spot1" style="skin_hotspotstyle" ath="101.06804043621204" atv="0" linkedscene="scene_0007"/>
+    <hotspot name="spotVR1" style="skin_hotspotstyle_Text" ath="106.06804043621204" atv="0" html="Entree" linkedscene="scene_0007"/>
+    <hotspot name="spot2" style="skin_hotspotstyle" ath="-41.46752369706807" atv="0" linkedscene="scene_0004"/>
+    <hotspot name="spotVR2" style="skin_hotspotstyle_Text" ath="-36.46752369706807" atv="0" html="Chambre" linkedscene="scene_0004"/>
+    <hotspot name="spot3" style="skin_hotspotstyle" ath="8.169963838342516" atv="0" linkedscene="scene_0005"/>
+    <hotspot name="spotVR3" style="skin_hotspotstyle_Text" ath="13.169963838342516" atv="0" html="Chambre 2" linkedscene="scene_0005"/>
+    <hotspot name="spot4" style="skin_hotspotstyle" ath="-68.80650936065612" atv="0" linkedscene="scene_0006"/>
+    <hotspot name="spotVR4" style="skin_hotspotstyle_Text" ath="-63.80650936065612" atv="0" html="Salle de douche" linkedscene="scene_0006"/>
+  </scene>
+  <scene name="scene_0004" title="Chambre" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0004.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0004.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0004.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0004.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="-128.8669440131012" atv="0" linkedscene="scene_0003"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="-123.8669440131012" atv="0" html="Hall" linkedscene="scene_0003"/>
+  </scene>
+  <scene name="scene_0005" title="Chambre 2" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0005.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0005.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0005.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0005.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="141.50971198804396" atv="0" linkedscene="scene_0003"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="146.50971198804396" atv="0" html="Hall" linkedscene="scene_0003"/>
+  </scene>
+  <scene name="scene_0006" title="Salle de douche" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0006.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0006.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0006.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0006.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="143.44950817110615" atv="0" linkedscene="scene_0003"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="148.44950817110615" atv="0" html="Hall" linkedscene="scene_0003"/>
+  </scene>
+  <scene name="scene_0007" title="Entree" onstart="LoadMap();set(layer[skin_btn_vr].visible, false);" thumburl="panos/0007.tiles/thumb.jpg" lat="" lng="" heading="">
+    <view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="110" maxpixelzoom="1.0" fovmin="80" fovmax="130" limitview="lookat" vlookatmin="-15" vlookatmax="45" hlookatmin="NaN" hlookatmax="NaN"/>
+    <preview url="panos/0007.tiles/preview.jpg"/>
+    <image type="CUBE" multires="true" tilesize="512" stereo="false" stereolabels="L|R">
+      <level tiledimagewidth="2048" tiledimageheight="2048">
+        <cube url="panos/0007.tiles/%s/l2/%v/l2_%s_%v_%h.jpg"/>
+      </level>
+      <level tiledimagewidth="1024" tiledimageheight="1024">
+        <cube url="panos/0007.tiles/%s/l1/%v/l1_%s_%v_%h.jpg"/>
+      </level>
+    </image>
+    <hotspot name="spot0" style="skin_hotspotstyle" ath="106.61729189551882" atv="0" linkedscene="scene_0001"/>
+    <hotspot name="spotVR0" style="skin_hotspotstyle_Text" ath="111.61729189551882" atv="0" html="Salon" linkedscene="scene_0001"/>
+    <hotspot name="spot1" style="skin_hotspotstyle" ath="71.45243258992558" atv="0" linkedscene="scene_0003"/>
+    <hotspot name="spotVR1" style="skin_hotspotstyle_Text" ath="76.45243258992558" atv="0" html="Hall" linkedscene="scene_0003"/>
+  </scene>
+  <autorotate enabled="true"/>
+  <layer name="Maps" type="container" keep="true" handcursor="false" capture="false" align="righttop" width="1024" height="1024" x="0" y="0" scale=".25" scalechildren="true" onclick="openmap();" bgcapture="true" zorder="10" if="!device.mobile"/>
+  <layer name="Maps0000" url="skin/Maps0000.png" parent="Maps" keep="true" handcursor="false" capture="false" scalechildren="true" scale=".9" align="top" if="!device.mobile"/>
+  <layer name="activespot" keep="true" url="skin/vtourskin_mapspot.png" parent="spot1" align="lefttop" zorder="2"/>
+  <layer name="PlusMinusMap" keep="true" url="%CURRENTXML%/skin/vtourskin.png" align="righttop" crop="64|320|64|64" scale=".5" onclick="showmap();" zorder="12" if="!device.mobile"/>
+  <layer name="spot1" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="897.8739624023438" y="645.7156066894531" zorder="1" linkedscene="scene_0001" onclick="mapspot_loadscene(scene_0001, spot1);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <layer name="spot2" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="890.4793701171875" y="901.1771850585938" zorder="1" linkedscene="scene_0002" onclick="mapspot_loadscene(scene_0002, spot2);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <layer name="spot3" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="348.5932922363281" y="841.7564697265625" zorder="1" linkedscene="scene_0003" onclick="mapspot_loadscene(scene_0003, spot3);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <layer name="spot4" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="243.23751831054688" y="719.2630920410156" zorder="1" linkedscene="scene_0004" onclick="mapspot_loadscene(scene_0004, spot4);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <layer name="spot5" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="372.6310119628906" y="672.00244140625" zorder="1" linkedscene="scene_0005" onclick="mapspot_loadscene(scene_0005, spot5);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <layer name="spot6" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="154.3971710205078" y="866.4311370849609" zorder="1" linkedscene="scene_0006" onclick="mapspot_loadscene(scene_0006, spot6);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <layer name="spot7" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="bottom" x="617.5999755859375" y="932.7501983642578" zorder="1" linkedscene="scene_0007" onclick="mapspot_loadscene(scene_0007, spot7);" tooltip="" onloaded="if(skin_settings.tooltips_mapspots, if(linkedscene, copy(tooltip,scene[get(linkedscene)].title); loadstyle(skin_tooltips); ));" if="!device.mobile"/>
+  <style name="mapspot1" keep="true" url="skin/vtourskin_mapspotactive.png" parent="Maps0000" align="lefttop" edge="center" scale.mobile="2" onover="copy(layer[skin_tooltip].html, tooltip); set(layer[skin_tooltip].visible, true); tween(layer[skin_tooltip].alpha, 1.0, 0.1); asyncloop(hovering, copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );" onout="tween(layer[skin_tooltip].alpha, 0.0, 0.1, default, set(layer[skin_tooltip].visible,false), copy(layer[skin_tooltip].x,mouse.stagex); copy(layer[skin_tooltip].y,mouse.stagey); );" if="!device.mobile"/>
+</krpano>
