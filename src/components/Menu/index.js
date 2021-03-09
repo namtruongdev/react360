@@ -13,10 +13,11 @@ const MenuContainers = styled.div`
     position: absolute;
     bottom: -40px;
     border: none;
-    background: rgb(5,167,173);
+    background: rgb(5, 167, 173);
     color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
+    cursor: pointer;
   }
 `;
 
@@ -80,7 +81,7 @@ const borderRadiusSmall = (className) => {
 };
 
 const Menu = ({ onHandleClick }) => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   const links = useMemo(
     () => [
       {
@@ -153,25 +154,28 @@ const Menu = ({ onHandleClick }) => {
     onHandleClick(name);
   };
 
-  const toggleButton = () => setToggle(value => !value)
+  const toggleButton = () => setToggle((value) => !value);
 
   return (
     <MenuContainers id="menu">
-      <button className="floor-toogle" onClick={toggleButton}>Floor</button>
-      {toggle && (<List>
-        {links.map((link, index) => (
-          <Item
-            key={link.name}
-            onClick={() => handleClick(link.name)}
-            className={
-              link.className + (link.name === activeLink ? ' active' : '')
-            }
-            id={`floor${index}`}
-          >
-            <Link href={link.to}>{link.name}</Link>
-          </Item>
-        ))}
-      </List>
+      <button className="floor-toogle" onClick={toggleButton}>
+        Floor
+      </button>
+      {toggle && (
+        <List>
+          {links.map((link, index) => (
+            <Item
+              key={link.name}
+              onClick={() => handleClick(link.name)}
+              className={
+                link.className + (link.name === activeLink ? ' active' : '')
+              }
+              id={`floor${index}`}
+            >
+              <Link href={link.to}>{link.name}</Link>
+            </Item>
+          ))}
+        </List>
       )}
     </MenuContainers>
   );
