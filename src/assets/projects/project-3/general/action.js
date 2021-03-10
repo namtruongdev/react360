@@ -21,16 +21,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -51,16 +41,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -82,16 +62,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -113,16 +83,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -144,16 +104,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -175,16 +125,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -206,16 +146,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -237,16 +167,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -268,16 +188,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -299,16 +209,6 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
-
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
-            );
-          });
         },
         api.images.getCurrentImageIndex()
       );
@@ -329,14 +229,25 @@ export const initializeAPIDemo = (api) => {
         null,
         () => {
           overlay.style.display = 'none';
-          const spot0 = document.querySelector(
-            '#wr360DynamicSpot_spot0_wr360PlayerId'
-          );
+          const spot2 = document.querySelector('#wr360DynamicSpot_spot2_wr360PlayerId');
+          const spot3 = document.querySelector('#wr360DynamicSpot_spot3_wr360PlayerId');
+          const spot5 = document.querySelector('#wr360DynamicSpot_spot5_wr360PlayerId');
 
-          spot0.addEventListener('click', (e) => {
-            e.preventDefault();
+          spot2.addEventListener('click', () => {
             window.location.assign(
-              'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+              '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html'
+            );
+          });
+
+          spot3.addEventListener('click', () => {
+            window.location.assign(
+              '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html'
+            );
+          });
+
+          spot5.addEventListener('click', () => {
+            window.location.assign(
+              '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html'
             );
           });
         },
@@ -347,11 +258,25 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const spot0 = document.querySelector('#wr360DynamicSpot_spot0_wr360PlayerId');
+  const spot2 = document.querySelector('#wr360DynamicSpot_spot2_wr360PlayerId');
+  const spot3 = document.querySelector('#wr360DynamicSpot_spot3_wr360PlayerId');
+  const spot5 = document.querySelector('#wr360DynamicSpot_spot5_wr360PlayerId');
 
-  spot0.addEventListener('click', () => {
+  spot2.addEventListener('click', () => {
     window.location.assign(
-      'https://studiotocdo.vn/wp-content/uploads/vv360/VV2%20116/tour.html'
+      '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html'
+    );
+  });
+
+  spot3.addEventListener('click', () => {
+    window.location.assign(
+      '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html'
+    );
+  });
+
+  spot5.addEventListener('click', () => {
+    window.location.assign(
+      '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html'
     );
   });
 };
