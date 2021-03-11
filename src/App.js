@@ -1,10 +1,52 @@
+import FeatherIcon from 'feather-icons-react';
 import { initializeAPIDemo } from './assets/projects/project-3/general/action.js';
 import license from './assets/projects/project-3/general/license.lic';
 import './assets/projects/project-1/overall/assets/css/round.css';
+import styled from 'styled-components';
 
 import Menu from './components/Menu';
 // import Floor4 from './assets/projects/project-1/overall/components/Floor4';
 // import Floor7 from './assets/projects/project-1/overall/components/Floor7';
+
+const Popup = styled.div`
+  display: none;
+  position: absolute;
+  left: 50%;
+  background: #fff;
+  z-index: 999999999999;
+  border-radius: 5px;
+  padding: 28px 20px 20px 20px;
+  width: 280px;
+  transform: translate(-50%, 0);
+  top: -27px;
+  left: 175px;
+  &:hover .position_rollover {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .icon-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999999999999;
+  }
+
+  &:hover {
+    // background: #333
+  }
+`;
+
+const Button = styled.button`
+  border: none;
+  background: rgb(5, 167, 173);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5;
+  cursor: pointer;
+  margin: auto;
+`;
 
 const App = () => {
   const viewer = window.WR360.ImageRotator.Create('wr360PlayerId');
@@ -145,6 +187,11 @@ const App = () => {
           display: 'none',
         }}
       ></div>
+      <Popup id="popup">
+        <FeatherIcon icon="x" size="16" fill="white" color="grey" className="icon-close" />
+        <Button id="virtual_360">3D preview</Button>
+        <Button id="image_360">image 360</Button>
+      </Popup>
     </>
   );
 };
