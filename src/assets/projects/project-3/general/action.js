@@ -248,7 +248,7 @@ export const initializeAPIDemo = (api) => {
           const spot5 = document.querySelector('#wr360DynamicSpot_spot5_wr360PlayerId');
 
           spot2.addEventListener('click', () => {
-            popUp.style.display = 'flex';
+            popUp.show();
             virtual_360.addEventListener('click', () => {
               window.location.assign(
                 '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html'

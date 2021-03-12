@@ -32,9 +32,9 @@ export const initializeAPIDemo = (api) => {
         const spot7 = document.querySelector(
           '#wr360DynamicSpot_spot7_wr360PlayerId'
         );
-        const spot8 = document.querySelector(
-          '#wr360DynamicSpot_spot8_wr360PlayerId'
-        );
+        // const spot8 = document.querySelector(
+        //   '#wr360DynamicSpot_spot8_wr360PlayerId'
+        // );
 
         spot4.addEventListener('click', (e) => {
           e.preventDefault();
@@ -105,7 +105,7 @@ export const initializeAPIDemo = (api) => {
   const spot4 = document.querySelector('#wr360DynamicSpot_spot4_wr360PlayerId');
   const spot6 = document.querySelector('#wr360DynamicSpot_spot6_wr360PlayerId');
   const spot7 = document.querySelector('#wr360DynamicSpot_spot7_wr360PlayerId');
-  const spot8 = document.querySelector('#wr360DynamicSpot_spot8_wr360PlayerId');
+  // const spot8 = document.querySelector('#wr360DynamicSpot_spot8_wr360PlayerId');
 
   spot4.addEventListener('click', (e) => {
     e.preventDefault();
