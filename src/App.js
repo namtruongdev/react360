@@ -222,11 +222,11 @@ const App = () => {
       <Popup id="popup">
         <Div id="virtual_360" >
           <FeatherIcon icon="codepen" size="28" fill="white" color="black" className="icon-close1" />
-          <small className="text">3D Image</small>
+          <small className="text">360 Preview</small>
         </Div>
         <Div1 id="image_360">
           <FeatherIcon icon="image" size="28" fill="white" color="#ea4c89" className="icon-close1" />
-          <small className="text">360 Preview</small>
+          <small className="text">3D Image</small>
         </Div1>
       </Popup>
     </>
