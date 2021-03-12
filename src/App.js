@@ -9,17 +9,17 @@ import Menu from './components/Menu';
 // import Floor7 from './assets/projects/project-1/overall/components/Floor7';
 
 const Popup = styled.div`
-display: none;
-    position: absolute;
-    left: 50%;
-    background: #fff;
-    z-index: 999999999999;
-    border-radius: 5px;
-    padding: 20px 17px 19px 17px;
-    width: 230px;
-    transform: translate(-50%, 0);
-    top: -24px;
-    left: 148px;
+  display: none;
+  position: absolute;
+  left: 50%;
+  background: transparent;
+  z-index: 999999999999;
+  border-radius: 5px;
+  padding: 28px 20px 20px 20px;
+  width: 280px;
+  transform: translate(-50%, 0);
+  top: -27px;
+  left: 175px;
   &:hover .position_rollover {
     display: none !important;
     visibility: hidden !important;
@@ -32,21 +32,53 @@ display: none;
     cursor: pointer;
     z-index: 999999999999;
   }
+  .icon-close1 {
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999999999999;
+  }
 
   &:hover {
     // background: #333
   }
 `;
 
-const Button = styled.button`
-  border: none;
-  background: rgb(5,167,173);
-  color: #fff;
-  padding: 6px 12px;
+
+const Div = styled.div`
+    border:none;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  padding: 2.9%;
   cursor: pointer;
   margin: auto;
-  font-size: 13px;
+  display: flex;
+  .text{
+  font-weight: 600;
+  display: flex;
+  align-items:center;
+  padding-left:5px;
+  }
 `;
+const Div1 = styled.div`
+  border:none;
+  background: #ea4c89;
+  color: #fff;
+  padding: 3%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+  display: flex;
+  .text{
+  font-weight: 600;
+  padding-left:5px;
+  display: flex;
+  align-items:center;
+  }
+`;
+
+
 
 const App = () => {
   const viewer = window.WR360.ImageRotator.Create('wr360PlayerId');
@@ -188,9 +220,14 @@ const App = () => {
         }}
       ></div>
       <Popup id="popup">
-        <FeatherIcon icon="x" size="16" fill="white" color="grey" className="icon-close" />
-        <Button id="virtual_360">3D preview</Button>
-        <Button id="image_360">image 360</Button>
+        <Div id="virtual_360" >
+          <FeatherIcon icon="codepen" size="28" fill="white" color="black" className="icon-close1" />
+          <small className="text">3D Image</small>
+        </Div>
+        <Div1 id="image_360">
+          <FeatherIcon icon="image" size="28" fill="white" color="#ea4c89" className="icon-close1" />
+          <small className="text">360 Preview</small>
+        </Div1>
       </Popup>
     </>
   );
