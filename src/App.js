@@ -9,17 +9,17 @@ import Menu from './components/Menu';
 // import Floor7 from './assets/projects/project-1/overall/components/Floor7';
 
 const Popup = styled.div`
-  display: none;
-  position: absolute;
-  left: 50%;
-  background: #fff;
-  z-index: 999999999999;
-  border-radius: 5px;
-  padding: 28px 20px 20px 20px;
-  width: 280px;
-  transform: translate(-50%, 0);
-  top: -27px;
-  left: 175px;
+display: none;
+    position: absolute;
+    left: 50%;
+    background: #fff;
+    z-index: 999999999999;
+    border-radius: 5px;
+    padding: 20px 17px 19px 17px;
+    width: 230px;
+    transform: translate(-50%, 0);
+    top: -24px;
+    left: 148px;
   &:hover .position_rollover {
     display: none !important;
     visibility: hidden !important;
@@ -40,12 +40,12 @@ const Popup = styled.div`
 
 const Button = styled.button`
   border: none;
-  background: rgb(5, 167, 173);
+  background: rgb(5,167,173);
   color: #fff;
-  padding: 8px 20px;
-  border-radius: 5;
+  padding: 6px 12px;
   cursor: pointer;
   margin: auto;
+  font-size: 13px;
 `;
 
 const App = () => {
