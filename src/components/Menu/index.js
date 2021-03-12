@@ -5,7 +5,7 @@ const MenuContainers = styled.div`
   position: fixed;
   bottom: 95px;
   left: 15px;
-  z-index: 11111111111;
+  z-index: 999;
   .floor-toogle {
     position: absolute;
     bottom: -40px;
