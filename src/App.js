@@ -20,10 +20,7 @@ const Popup = styled.div`
   transform: translate(-50%, 0);
   top: -27px;
   left: 175px;
-  &:hover .position_rollover {
-    display: none !important;
-    visibility: hidden !important;
-  }
+
   .icon-close {
     position: absolute;
     top: 8px;
@@ -38,15 +35,49 @@ const Popup = styled.div`
     cursor: pointer;
     z-index: 999999999999;
   }
+`;
 
-  &:hover {
-    // background: #333
+const Preview = styled.div`
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 999999;
+  background-color: rgb(0 0 0 / 75%);
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.7s;
+  img {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+  } 
+
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+  }
+
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+
+  .close-preview {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
   }
 `;
 
 
 const Div = styled.div`
-    border:none;
+  border:none;
   background: white;
   color: black;
   border-radius: 5px;
@@ -203,8 +234,6 @@ const App = () => {
         className="wr360_player"
         style={{ backgroundColor: '#FFFFFF' }}
       ></section>
-      {/* <Floor7 />
-      <Floor4 /> */}
       <div className="preload" style={{ display: 'block' }}></div>
       <div
         id="overlay"
@@ -229,6 +258,9 @@ const App = () => {
           <small className="text">3D Image</small>
         </Div1>
       </Popup>
+      <Preview className="preview_360">
+        <FeatherIcon icon="x" size="45" fill="black" color="white" className="close-preview" />
+      </Preview>
     </>
   );
 };
