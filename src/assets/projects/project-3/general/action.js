@@ -13,7 +13,6 @@ export const initializeAPIDemo = (api) => {
   const image_360 = document.querySelector('#image_360');
   const switchBtn0 = document.querySelector('#floor0');
   const overlay = document.querySelector('#overlay');
-  const close = document.querySelector('.icon-close');
 
   switchBtn0.addEventListener('click', (e) => {
     overlay.style.display = 'block';
@@ -246,78 +245,105 @@ export const initializeAPIDemo = (api) => {
           const spot2 = document.querySelector('#wr360DynamicSpot_spot2_wr360PlayerId');
           const spot3 = document.querySelector('#wr360DynamicSpot_spot3_wr360PlayerId');
           const spot5 = document.querySelector('#wr360DynamicSpot_spot5_wr360PlayerId');
+          const spot7 = document.querySelector('#wr360DynamicSpot_spot7_wr360PlayerId');
+          const spot8 = document.querySelector('#wr360DynamicSpot_spot8_wr360PlayerId');
 
-          spot2.addEventListener('mouseenter', (e) => {
-            e.stopPropagation();
-            e.preventDefault();
+          spot2.addEventListener('mouseenter', () => {
             spot2.append(popUp);
             popUp.style.display = 'flex';
             virtual_360.addEventListener('click', () => {
-              window.location.assign(
-                '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html'
-              );
+              preview.style.display = 'block'
+              iframe.src = '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html';
+              img.remove();
+              preview.append(iframe);
             });
 
             image_360.addEventListener('click', () => {
               preview.style.display = 'block'
               img.src = "/assets/projects/project-3/floor/Floor2/360_image/T2_305B.jpg";
+              iframe.remove();
               preview.append(img);
             });
           });
-          spot2.addEventListener('mouseleave', (e) => {
+
+          spot2.addEventListener('mouseleave', () => {
             popUp.style.display = 'none';
-          })
-          spot3.addEventListener('mouseleave', (e) => {
-            popUp.style.display = 'none';
-          })
-          spot5.addEventListener('mouseleave', (e) => {
-            popUp.style.display = 'none';
-          })
-          spot3.addEventListener('mouseenter', (e) => {
-            e.stopPropagation();
-            e.preventDefault();
+          });
+
+          spot3.addEventListener('mouseenter', () => {
             spot3.append(popUp);
             popUp.style.display = 'flex';
             virtual_360.addEventListener('click', () => {
-              window.location.assign(
-                '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html'
-              );
+              preview.style.display = 'block'
+              iframe.src = '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html';
+              img.remove();
+              preview.append(iframe);
             });
 
             image_360.addEventListener('click', () => {
               preview.style.display = 'block'
               img.src = '/assets/projects/project-3/floor/Floor3/360_image/T3_202B.jpg';
+              iframe.remove();
               preview.append(img);
             });
           });
 
-          spot5.addEventListener('mouseenter', (e) => {
-            e.stopPropagation();
+          spot3.addEventListener('mouseleave', () => {
+            popUp.style.display = 'none';
+          });
+
+          spot5.addEventListener('mouseenter', () => {
             spot5.append(popUp);
             popUp.style.display = 'flex';
             virtual_360.addEventListener('click', () => {
-              window.location.assign(
-                '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html'
-              );
+              preview.style.display = 'block'
+              iframe.src = '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html';
+              img.remove();
+              preview.append(iframe);
             });
 
             image_360.addEventListener('click', () => {
               preview.style.display = 'block'
               img.src = '/assets/projects/project-3/floor/Floor5/360_image/T5_2001A.jpg';
+              iframe.remove();
               preview.append(img);
             });
           });
 
-          spot7.addEventListener('click', () => {
-            preview.style.display = 'block'
-            img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
-            preview.append(img);
+          spot5.addEventListener('mouseleave', () => {
+            popUp.style.display = 'none';
           });
 
-          spot8.addEventListener('click', () => {
-            preview.style.display = 'block'
-            img.src = '/assets/projects/project-3/floor/Floor8/360_image/T8_402B.jpg';
-            preview.append(img);
+          spot7.addEventListener('mouseenter', () => {
+            spot7.append(popUp);
+            popUp.style.display = 'flex';
+
+            image_360.addEventListener('click', () => {
+              preview.style.display = 'block'
+              img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
+              iframe.remove();
+              preview.append(img);
+            });
+          });
+
+          spot7.addEventListener('mouseleave', () => {
+            popUp.style.display = 'none';
+          })
+
+          spot8.addEventListener('mouseenter', () => {
+            spot8.append(popUp);
+            popUp.style.display = 'flex';
+
+            image_360.addEventListener('click', () => {
+              preview.style.display = 'block'
+              img.src = '/assets/projects/project-3/floor/Floor8/360_image/T8_402B.jpg';
+              iframe.remove();
+              preview.append(img);
+            });
+          });
+
+          spot8.addEventListener('mouseleave', () => {
+            popUp.style.display = 'none';
           });
         },
         api.images.getCurrentImageIndex()
@@ -334,79 +360,105 @@ export const initializeAPIDemo = (api) => {
   const spot8 = document.querySelector('#wr360DynamicSpot_spot8_wr360PlayerId');
   const preview = document.querySelector('.preview_360');
   const closePreview = document.querySelector('.close-preview');
-  var img = document.createElement('img');
+  const img = document.createElement('img');
+  const iframe = document.createElement('iframe');
 
-  spot2.addEventListener('mouseenter', (e) => {
-    e.stopPropagation();
-    e.preventDefault();
+  spot2.addEventListener('mouseenter', () => {
     spot2.append(popUp);
     popUp.style.display = 'flex';
     virtual_360.addEventListener('click', () => {
-      window.location.assign(
-        '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html'
-      );
+      preview.style.display = 'block'
+      iframe.src = '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html';
+      img.remove();
+      preview.append(iframe);
     });
 
     image_360.addEventListener('click', () => {
       preview.style.display = 'block'
       img.src = "/assets/projects/project-3/floor/Floor2/360_image/T2_305B.jpg";
+      iframe.remove();
       preview.append(img);
     });
   });
-  spot2.addEventListener('mouseleave', (e) => {
+
+  spot2.addEventListener('mouseleave', () => {
     popUp.style.display = 'none';
-  })
-  spot3.addEventListener('mouseleave', (e) => {
-    popUp.style.display = 'none';
-  })
-  spot5.addEventListener('mouseleave', (e) => {
-    popUp.style.display = 'none';
-  })
-  spot3.addEventListener('mouseenter', (e) => {
-    e.stopPropagation();
-    e.preventDefault();
+  });
+
+  spot3.addEventListener('mouseenter', () => {
     spot3.append(popUp);
     popUp.style.display = 'flex';
     virtual_360.addEventListener('click', () => {
-      window.location.assign(
-        '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html'
-      );
+      preview.style.display = 'block'
+      iframe.src = '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html';
+      img.remove();
+      preview.append(iframe);
     });
 
     image_360.addEventListener('click', () => {
       preview.style.display = 'block'
       img.src = '/assets/projects/project-3/floor/Floor3/360_image/T3_202B.jpg';
+      iframe.remove();
       preview.append(img);
     });
   });
 
-  spot5.addEventListener('mouseenter', (e) => {
-    e.stopPropagation();
+  spot3.addEventListener('mouseleave', () => {
+    popUp.style.display = 'none';
+  });
+
+  spot5.addEventListener('mouseenter', () => {
     spot5.append(popUp);
     popUp.style.display = 'flex';
     virtual_360.addEventListener('click', () => {
-      window.location.assign(
-        '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html'
-      );
+      preview.style.display = 'block'
+      iframe.src = '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html';
+      img.remove();
+      preview.append(iframe);
     });
 
     image_360.addEventListener('click', () => {
       preview.style.display = 'block'
       img.src = '/assets/projects/project-3/floor/Floor5/360_image/T5_2001A.jpg';
+      iframe.remove();
       preview.append(img);
     });
   });
 
-  spot7.addEventListener('click', () => {
-    preview.style.display = 'block'
-    img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
-    preview.append(img);
+  spot5.addEventListener('mouseleave', () => {
+    popUp.style.display = 'none';
   });
 
-  spot8.addEventListener('click', () => {
-    preview.style.display = 'block'
-    img.src = '/assets/projects/project-3/floor/Floor8/360_image/T8_402B.jpg';
-    preview.append(img);
+  spot7.addEventListener('mouseenter', () => {
+    spot7.append(popUp);
+    popUp.style.display = 'flex';
+
+    image_360.addEventListener('click', () => {
+      preview.style.display = 'block'
+      img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
+      iframe.remove();
+      preview.append(img);
+    });
+  });
+
+  spot7.addEventListener('mouseleave', () => {
+    popUp.style.display = 'none';
+  })
+
+  spot8.addEventListener('mouseenter', () => {
+    spot8.append(popUp);
+    popUp.style.display = 'flex';
+
+    image_360.addEventListener('click', () => {
+      preview.style.display = 'block'
+      img.src = '/assets/projects/project-3/floor/Floor8/360_image/T8_402B.jpg';
+      iframe.remove();
+      preview.append(img);
+    });
+  });
+
+  spot8.addEventListener('mouseleave', () => {
+    popUp.style.display = 'none';
   });
 
   img.addEventListener('click', (e) => {

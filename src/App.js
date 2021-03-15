@@ -57,6 +57,16 @@ const Preview = styled.div`
     position: absolute;
   } 
 
+  iframe {
+    width: 90%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border: none;
+  }
+
   @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)}
     to {-webkit-transform:scale(1)}
