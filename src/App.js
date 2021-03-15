@@ -86,7 +86,7 @@ const Preview = styled.div`
 `;
 
 
-const Div = styled.div`
+const Btn360Preview = styled.button`
   border:none;
   background: white;
   color: black;
@@ -95,9 +95,12 @@ const Div = styled.div`
   cursor: pointer;
   margin: auto;
   display: flex;
+  align-items:center;
+
   .text{
   font-weight: 600;
   display: flex;
+  font-size:13px;
   align-items:center;
   padding-left:5px;
   }
@@ -259,10 +262,10 @@ const App = () => {
         }}
       ></div>
       <Popup id="popup">
-        <Div id="virtual_360" >
-          <FeatherIcon icon="codepen" size="28" fill="white" color="black" className="icon-close1" />
+        <Btn360Preview id="virtual_360" >
+          <FeatherIcon icon="codepen" size="28" fill="white" color="black" className="icon-close1"  id='iconPreview'/>
           <small className="text">360 Preview</small>
-        </Div>
+        </Btn360Preview>
         <Div1 id="image_360">
           <FeatherIcon icon="image" size="28" fill="white" color="#ea4c89" className="icon-close1" />
           <small className="text">3D Image</small>
