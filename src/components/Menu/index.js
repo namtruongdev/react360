@@ -82,7 +82,7 @@ const borderRadiusSmall = (className) => {
 };
 
 const Menu = ({ onHandleClick }) => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const links = useMemo(
     () => [
       {
@@ -155,7 +155,7 @@ const Menu = ({ onHandleClick }) => {
     onHandleClick(name);
   };
 
-  const toggleButton = () => setToggle((value) => !value);
+  const toggleButton = () => setToggle(!toggle);
 
   return (
     <MenuContainers id="menu">
