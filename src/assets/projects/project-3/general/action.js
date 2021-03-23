@@ -252,6 +252,10 @@ export const initializeAPIDemo = (api) => {
           spot2.addEventListener('mouseenter', () => {
             spot2.append(popUp);
             popUp.style.display = 'flex';
+            virtual_360.disabled = false;
+            virtual_360.style.cursor = 'pointer';
+            icon_btn.style.cursor = 'pointer';
+
             virtual_360.addEventListener('click', () => {
               preview.style.display = 'block'
               iframe.src = '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html';
@@ -274,6 +278,10 @@ export const initializeAPIDemo = (api) => {
           spot3.addEventListener('mouseenter', () => {
             spot3.append(popUp);
             popUp.style.display = 'flex';
+            icon_btn.style.cursor = 'pointer';
+            virtual_360.disabled = false;
+            virtual_360.style.cursor = 'pointer'
+
             virtual_360.addEventListener('click', () => {
               preview.style.display = 'block'
               iframe.src = '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html';
@@ -296,6 +304,10 @@ export const initializeAPIDemo = (api) => {
           spot5.addEventListener('mouseenter', () => {
             spot5.append(popUp);
             popUp.style.display = 'flex';
+            virtual_360.disabled = false;
+            virtual_360.style.cursor = 'pointer'
+            icon_btn.style.cursor = 'pointer';
+
             virtual_360.addEventListener('click', () => {
               preview.style.display = 'block'
               iframe.src = '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html';
@@ -319,6 +331,10 @@ export const initializeAPIDemo = (api) => {
             spot7.append(popUp);
             popUp.style.display = 'flex';
 
+            virtual_360.disabled = true;
+            virtual_360.style.cursor = 'not-allowed'
+            icon_btn.style.cursor = 'not-allowed';
+
             image_360.addEventListener('click', () => {
               preview.style.display = 'block'
               img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
@@ -334,6 +350,10 @@ export const initializeAPIDemo = (api) => {
           spot8.addEventListener('mouseenter', () => {
             spot8.append(popUp);
             popUp.style.display = 'flex';
+
+            virtual_360.disabled = true;
+            virtual_360.style.cursor = 'not-allowed'
+            icon_btn.style.cursor = 'not-allowed';
 
             image_360.addEventListener('click', () => {
               preview.style.display = 'block'
@@ -427,7 +447,7 @@ export const initializeAPIDemo = (api) => {
     virtual_360.style.cursor = 'pointer'
     icon_btn.style.cursor = 'pointer';
 
-    
+
     virtual_360.addEventListener('click', () => {
       preview.style.display = 'block'
       iframe.src = '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html';
@@ -463,7 +483,7 @@ export const initializeAPIDemo = (api) => {
       iframe.remove();
       preview.append(img);
     });
-  }); 
+  });
 
   spot7.addEventListener('mouseleave', () => {
     popUp.style.display = 'none';
@@ -472,7 +492,7 @@ export const initializeAPIDemo = (api) => {
   spot8.addEventListener('mouseenter', () => {
     spot8.append(popUp);
     popUp.style.display = 'flex';
-    
+
     virtual_360.disabled = true;
     virtual_360.style.cursor = 'not-allowed'
     icon_btn.style.cursor = 'not-allowed';
