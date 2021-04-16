@@ -4,7 +4,7 @@ import close from '../../../../images/close.svg';
 
 const Floor4 = () => {
   return (
-    <div className="floor-4" style={{ opacity: 0 }}>
+    <div className="floor-4" style={{ opacity: 0, position: 'absolute' }}>
       <div
         className="closeFloor4"
         style={{

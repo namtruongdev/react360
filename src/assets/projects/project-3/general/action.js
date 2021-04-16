@@ -1,6 +1,6 @@
 export const initializeAPIDemo = (api) => {
   window.$(function () {
-    window.$('#floor4-image').maphilight();
+    window.$('#floor-7').maphilight();
   });
 
   let config = {
@@ -11,9 +11,10 @@ export const initializeAPIDemo = (api) => {
   const popUp = document.querySelector('#popup');
   const virtual_360 = document.querySelector('#virtual_360');
   const image_360 = document.querySelector('#image_360');
+  const highlight = document.querySelector('#highlight');
   const switchBtn0 = document.querySelector('#floor0');
   const overlay = document.querySelector('#overlay');
-  const icon_btn = document.querySelector('#iconPreview')
+  const icon_btn = document.querySelector('#iconPreview');
 
   switchBtn0.addEventListener('click', (e) => {
     overlay.style.display = 'block';
@@ -251,7 +252,7 @@ export const initializeAPIDemo = (api) => {
 
           spot2.addEventListener('mouseenter', () => {
             spot2.append(popUp);
-            popUp.style.display = 'flex';
+            popUp.style.display = 'block';
             virtual_360.disabled = false;
             virtual_360.style.cursor = 'pointer';
             icon_btn.style.cursor = 'pointer';
@@ -277,7 +278,7 @@ export const initializeAPIDemo = (api) => {
 
           spot3.addEventListener('mouseenter', () => {
             spot3.append(popUp);
-            popUp.style.display = 'flex';
+            popUp.style.display = 'block';
             icon_btn.style.cursor = 'pointer';
             virtual_360.disabled = false;
             virtual_360.style.cursor = 'pointer'
@@ -303,7 +304,7 @@ export const initializeAPIDemo = (api) => {
 
           spot5.addEventListener('mouseenter', () => {
             spot5.append(popUp);
-            popUp.style.display = 'flex';
+            popUp.style.display = 'block';
             virtual_360.disabled = false;
             virtual_360.style.cursor = 'pointer'
             icon_btn.style.cursor = 'pointer';
@@ -329,7 +330,7 @@ export const initializeAPIDemo = (api) => {
 
           spot7.addEventListener('mouseenter', () => {
             spot7.append(popUp);
-            popUp.style.display = 'flex';
+            popUp.style.display = 'block';
 
             virtual_360.disabled = true;
             virtual_360.style.cursor = 'not-allowed'
@@ -341,6 +342,13 @@ export const initializeAPIDemo = (api) => {
               iframe.remove();
               preview.append(img);
             });
+
+            highlight.addEventListener('click', () => {
+              preview.style.display = 'block'
+              img.src = "/assets/projects/project-3/floor/Floor2/360_image/T2_305B.jpg";
+              iframe.remove();
+              preview.append(img);
+            });
           });
 
           spot7.addEventListener('mouseleave', () => {
@@ -349,7 +357,7 @@ export const initializeAPIDemo = (api) => {
 
           spot8.addEventListener('mouseenter', () => {
             spot8.append(popUp);
-            popUp.style.display = 'flex';
+            popUp.style.display = 'block';
 
             virtual_360.disabled = true;
             virtual_360.style.cursor = 'not-allowed'
@@ -383,10 +391,31 @@ export const initializeAPIDemo = (api) => {
   const closePreview = document.querySelector('.close-preview');
   const img = document.createElement('img');
   const iframe = document.createElement('iframe');
+  const img_floor7 = document.querySelector('.floor-7');
+  const room_1 = document.querySelector('.room_1');
+  const room_01 = document.querySelector('#room_01');
+  const room_2 = document.querySelector('.room_2');
+  const room_02 = document.querySelector('#room_02');
+  const room_3 = document.querySelector('.room_3');
+  const room_03 = document.querySelector('#room_03');
+  const room_4 = document.querySelector('.room_4');
+  const room_04 = document.querySelector('#room_04');
+  const room_5 = document.querySelector('.room_5');
+  const room_05 = document.querySelector('#room_05');
+  const room_6 = document.querySelector('.room_6');
+  const room_06 = document.querySelector('#room_06');
+  const room_7 = document.querySelector('.room_7');
+  const room_07 = document.querySelector('#room_07');
+  const room_8 = document.querySelector('.room_8');
+  const room_08 = document.querySelector('#room_08');
+  const room_9 = document.querySelector('.room_9');
+  const room_09 = document.querySelector('#room_09');
+  const room_10 = document.querySelector('.room_10');
+  const room_1_0 = document.querySelector('#room_10');
 
   spot2.addEventListener('mouseenter', () => {
     spot2.append(popUp);
-    popUp.style.display = 'flex';
+    popUp.style.display = 'block';
 
     virtual_360.disabled = false;
     virtual_360.style.cursor = 'pointer';
@@ -413,7 +442,7 @@ export const initializeAPIDemo = (api) => {
 
   spot3.addEventListener('mouseenter', () => {
     spot3.append(popUp);
-    popUp.style.display = 'flex';
+    popUp.style.display = 'block';
     icon_btn.style.cursor = 'pointer';
 
 
@@ -442,7 +471,7 @@ export const initializeAPIDemo = (api) => {
 
   spot5.addEventListener('mouseenter', () => {
     spot5.append(popUp);
-    popUp.style.display = 'flex';
+    popUp.style.display = 'block';
     virtual_360.disabled = false;
     virtual_360.style.cursor = 'pointer'
     icon_btn.style.cursor = 'pointer';
@@ -469,19 +498,182 @@ export const initializeAPIDemo = (api) => {
 
   spot7.addEventListener('mouseenter', () => {
     spot7.append(popUp);
-    popUp.style.display = 'flex';
+    popUp.style.display = 'block';
 
     virtual_360.disabled = true;
     virtual_360.style.cursor = 'not-allowed'
     icon_btn.style.cursor = 'not-allowed';
-
-
 
     image_360.addEventListener('click', () => {
       preview.style.display = 'block'
       img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
       iframe.remove();
       preview.append(img);
+    });
+
+    highlight.addEventListener('click', () => {
+      room_01.addEventListener('mouseenter', () => {
+        room_1.style.display = 'flex';
+      });
+
+      room_01.addEventListener('mouseleave', () => {
+        room_1.style.display = 'none';
+      });
+
+      room_01.append(room_1);
+
+      room_01.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_1.style.top = top - 20 + 'px'
+        room_1.style.left = left - 20 + 'px'
+      });
+
+      room_03.addEventListener('mouseenter', () => {
+        room_3.style.display = 'flex';
+      });
+
+      room_03.addEventListener('mouseleave', () => {
+        room_3.style.display = 'none';
+      });
+
+      room_03.append(room_3);
+
+      room_03.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_3.style.top = top - 20 + 'px'
+        room_3.style.left = left - 20 + 'px'
+      });
+
+      room_04.addEventListener('mouseenter', () => {
+        room_4.style.display = 'flex';
+      });
+
+      room_04.addEventListener('mouseleave', () => {
+        room_4.style.display = 'none';
+      });
+
+      room_04.append(room_4);
+
+      room_04.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_4.style.top = top - 20 + 'px'
+        room_4.style.left = left - 20 + 'px'
+      });
+
+      room_05.addEventListener('mouseenter', () => {
+        room_5.style.display = 'flex';
+      });
+
+      room_05.addEventListener('mouseleave', () => {
+        room_5.style.display = 'none';
+      });
+
+      room_05.append(room_5);
+
+      room_05.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_5.style.top = top - 20 + 'px'
+        room_5.style.left = left - 20 + 'px'
+      });
+
+      room_06.addEventListener('mouseenter', () => {
+        room_6.style.display = 'flex';
+      });
+
+      room_06.addEventListener('mouseleave', () => {
+        room_6.style.display = 'none';
+      });
+
+      room_06.append(room_6);
+
+      room_06.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_6.style.top = top - 20 + 'px'
+        room_6.style.left = left - 20 + 'px'
+      });
+
+      room_07.addEventListener('mouseenter', () => {
+        room_7.style.display = 'flex';
+      });
+
+      room_07.addEventListener('mouseleave', () => {
+        room_7.style.display = 'none';
+      });
+
+      room_07.append(room_7);
+
+      room_07.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_7.style.top = top - 20 + 'px'
+        room_7.style.left = left - 20 + 'px'
+      });
+
+      room_08.addEventListener('mouseenter', () => {
+        room_8.style.display = 'flex';
+      });
+
+      room_08.addEventListener('mouseleave', () => {
+        room_8.style.display = 'none';
+      });
+
+      room_08.append(room_8);
+
+      room_08.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_8.style.top = top - 20 + 'px'
+        room_8.style.left = left - 20 + 'px'
+      });
+
+      room_09.addEventListener('mouseenter', () => {
+        room_9.style.display = 'flex';
+      });
+
+      room_09.addEventListener('mouseleave', () => {
+        room_9.style.display = 'none';
+      });
+
+      room_09.append(room_9);
+
+      room_09.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_9.style.top = top - 20 + 'px'
+        room_9.style.left = left - 20 + 'px'
+      });
+
+      room_1_0.addEventListener('mouseenter', () => {
+        room_10.style.display = 'flex';
+      });
+
+      room_1_0.addEventListener('mouseleave', () => {
+        room_10.style.display = 'none';
+      });
+
+      room_1_0.append(room_10);
+
+      room_1_0.addEventListener('mouseenter', (e) => {
+        var top = e.clientY,
+          left = e.clientX;
+        room_10.style.top = top - 20 + 'px'
+        room_10.style.left = left - 20 + 'px'
+      });
+
+      img_floor7.style.display = 'block';
+      img_floor7.style.zIndex = '999';
+      img_floor7.style.position = 'absolute';
+      closePreview.addEventListener('click', () => {
+        img_floor7.style.display = 'none';
+      });
+      window.$(function () {
+        window.$('#floor7-image').maphilight();
+      });
     });
   });
 
@@ -491,7 +683,7 @@ export const initializeAPIDemo = (api) => {
 
   spot8.addEventListener('mouseenter', () => {
     spot8.append(popUp);
-    popUp.style.display = 'flex';
+    popUp.style.display = 'block';
 
     virtual_360.disabled = true;
     virtual_360.style.cursor = 'not-allowed'
