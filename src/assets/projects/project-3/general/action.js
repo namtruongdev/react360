@@ -525,8 +525,8 @@ export const initializeAPIDemo = (api) => {
       room_01.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_1.style.top = top - 20 + 'px'
-        room_1.style.left = left - 20 + 'px'
+        room_1.style.top = top + 'px'
+        room_1.style.left = left + 'px'
       });
 
       room_03.addEventListener('mouseenter', () => {
@@ -542,8 +542,8 @@ export const initializeAPIDemo = (api) => {
       room_03.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_3.style.top = top - 20 + 'px'
-        room_3.style.left = left - 20 + 'px'
+        room_3.style.top = top + 'px'
+        room_3.style.left = left + 'px'
       });
 
       room_04.addEventListener('mouseenter', () => {
@@ -559,8 +559,8 @@ export const initializeAPIDemo = (api) => {
       room_04.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_4.style.top = top - 20 + 'px'
-        room_4.style.left = left - 20 + 'px'
+        room_4.style.top = top + 'px'
+        room_4.style.left = left + 'px'
       });
 
       room_05.addEventListener('mouseenter', () => {
@@ -576,8 +576,8 @@ export const initializeAPIDemo = (api) => {
       room_05.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_5.style.top = top - 20 + 'px'
-        room_5.style.left = left - 20 + 'px'
+        room_5.style.top = top + 'px'
+        room_5.style.left = left + 'px'
       });
 
       room_06.addEventListener('mouseenter', () => {
@@ -593,8 +593,8 @@ export const initializeAPIDemo = (api) => {
       room_06.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_6.style.top = top - 20 + 'px'
-        room_6.style.left = left - 20 + 'px'
+        room_6.style.top = top + 'px'
+        room_6.style.left = left + 'px'
       });
 
       room_07.addEventListener('mouseenter', () => {
@@ -610,8 +610,8 @@ export const initializeAPIDemo = (api) => {
       room_07.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_7.style.top = top - 20 + 'px'
-        room_7.style.left = left - 20 + 'px'
+        room_7.style.top = top + 'px'
+        room_7.style.left = left + 'px'
       });
 
       room_08.addEventListener('mouseenter', () => {
@@ -627,8 +627,8 @@ export const initializeAPIDemo = (api) => {
       room_08.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_8.style.top = top - 20 + 'px'
-        room_8.style.left = left - 20 + 'px'
+        room_8.style.top = top + 'px'
+        room_8.style.left = left + 'px'
       });
 
       room_09.addEventListener('mouseenter', () => {
@@ -644,8 +644,8 @@ export const initializeAPIDemo = (api) => {
       room_09.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_9.style.top = top - 20 + 'px'
-        room_9.style.left = left - 20 + 'px'
+        room_9.style.top = top + 'px'
+        room_9.style.left = left + 'px'
       });
 
       room_1_0.addEventListener('mouseenter', () => {
@@ -661,8 +661,8 @@ export const initializeAPIDemo = (api) => {
       room_1_0.addEventListener('mouseenter', (e) => {
         var top = e.clientY,
           left = e.clientX;
-        room_10.style.top = top - 20 + 'px'
-        room_10.style.left = left - 20 + 'px'
+        room_10.style.top = top + 'px'
+        room_10.style.left = left + 'px'
       });
 
       img_floor7.style.display = 'block';
