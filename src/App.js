@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import Menu from './components/Menu';
 // import Floor4 from './assets/projects/project-1/overall/components/Floor4';
-// import Floor7 from './assets/projects/project-1/overall/components/Floor7';
+import Floor7 from './assets/projects/project-3/components/Floor7';
 
 const Popup = styled.div`
   display: none;
@@ -15,21 +15,33 @@ const Popup = styled.div`
   background: transparent;
   z-index: 999999999999;
   border-radius: 5px;
-  padding: 28px 20px 20px 20px;
-  width: 280px;
+  padding: 0;
+  width: 180px;
   transform: translate(-50%, 0);
-  top: -27px;
-  left: 175px;
+  top: -50px;
+  left: 115px;
 
-  .icon-close {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    border-radius: 50%;
+  button {
+    border:none;
+    border-radius: 5px;
+    padding: 4%;
     cursor: pointer;
-    z-index: 999999999999;
+    margin: auto auto 12px auto;
+    display: flex;
+    align-items:center;
+    width: 120px;
+    background: #fff;
+    color: #333;
+      .text{
+        font-weight: 600;
+        display: flex;
+        font-size:13px;
+        align-items:center;
+        padding-left:5px;
+      }
   }
-  .icon-close1 {
+
+  .icon-close{
     position: relative;
     border-radius: 50%;
     cursor: pointer;
@@ -84,45 +96,6 @@ const Preview = styled.div`
     cursor: pointer;
   }
 `;
-
-
-const Btn360Preview = styled.button`
-  border:none;
-  background: white;
-  color: black;
-  border-radius: 5px;
-  padding: 2.9%;
-  cursor: pointer;
-  margin: auto;
-  display: flex;
-  align-items:center;
-
-  .text{
-  font-weight: 600;
-  display: flex;
-  font-size:13px;
-  align-items:center;
-  padding-left:5px;
-  }
-`;
-const Div1 = styled.div`
-  border:none;
-  background: #ea4c89;
-  color: #fff;
-  padding: 3%;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: auto;
-  display: flex;
-  .text{
-  font-weight: 600;
-  padding-left:5px;
-  display: flex;
-  align-items:center;
-  }
-`;
-
-
 
 const App = () => {
   const viewer = window.WR360.ImageRotator.Create('wr360PlayerId');
@@ -241,6 +214,7 @@ const App = () => {
 
   return (
     <>
+      <Floor7 />
       <Menu className="menu" onHandleClick={onHandleClick} />
       <section
         id="wr360PlayerId"
@@ -262,18 +236,261 @@ const App = () => {
         }}
       ></div>
       <Popup id="popup">
-        <Btn360Preview id="virtual_360" >
-          <FeatherIcon icon="codepen" size="28" fill="white" color="black" className="icon-close1"  id='iconPreview'/>
+        <button id="highlight" >
+          <FeatherIcon icon="loader" size="24" fill="white" color="black" className="icon-close" />
+          <small className="text">Highlight</small>
+        </button>
+        <button id="virtual_360" >
+          <FeatherIcon icon="codepen" size="24" fill="white" color="black" className="icon-close" id='iconPreview' />
           <small className="text">360 Preview</small>
-        </Btn360Preview>
-        <Div1 id="image_360">
-          <FeatherIcon icon="image" size="28" fill="white" color="#ea4c89" className="icon-close1" />
+        </button>
+        <button id="image_360">
+          <FeatherIcon icon="image" size="24" fill="white" color="black" className="icon-close" />
           <small className="text">3D Image</small>
-        </Div1>
+        </button>
       </Popup>
       <Preview className="preview_360">
         <FeatherIcon icon="x" size="45" fill="black" color="white" className="close-preview" />
       </Preview>
+      <div className="info room_1">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_2">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_3">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_4">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_5">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_6">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_7">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_8">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_9">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
+
+      <div className="info room_10">
+        <div className="info-text">
+          <h4>Name : 201</h4>
+          <p>Price: 585,000</p>
+          <p>Surface area: 718.71</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Additional space: 84.18</p>
+          <p>(66.7 m<sup>2</sup>)</p>
+          <p>Facing: North/South/East</p>
+          <p className="available">Available</p>
+        </div>
+        <div className="info-image">
+          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <p className="custom-text">
+            <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
+            <a href="#">Wishlist</a>
+          </p>
+          <p className="absolute-text">
+            <FeatherIcon icon="search" size="16" fill="white" color="grey" />
+            <a href="#">More details</a>
+          </p>
+        </div>
+      </div>
     </>
   );
 };
