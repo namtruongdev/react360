@@ -267,11 +267,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -291,11 +291,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -315,11 +315,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -339,11 +339,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -363,11 +363,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -387,11 +387,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -411,11 +411,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -435,11 +435,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -459,11 +459,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
@@ -483,11 +483,11 @@ const App = () => {
           <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
-            <a href="#">Wishlist</a>
+            <a href="/#">Wishlist</a>
           </p>
           <p className="absolute-text">
             <FeatherIcon icon="search" size="16" fill="white" color="grey" />
-            <a href="#">More details</a>
+            <a href="/#">More details</a>
           </p>
         </div>
       </div>
