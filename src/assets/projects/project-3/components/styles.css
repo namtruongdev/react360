@@ -3,9 +3,9 @@
   display: none;
   top: 0;
   background-color: #fff; 
-  width: 390px;
+  width: 360px;
   border-radius: 15px;
-  padding: 16px 32px;
+  padding: 11px 22px;
   justify-content: space-between;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
@@ -58,12 +58,16 @@
   position: relative
 }
 
+.close-popup {
+  top: 0;
+  cursor: pointer;
+  right: -10px;
+  position:absolute;
+}
+
 .absolute-text {
   position: absolute;
   bottom: 10px;
-}
-
-.absolute-text{
   font-size: 13px;
   white-space: nowrap
 }
