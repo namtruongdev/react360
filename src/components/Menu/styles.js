@@ -85,12 +85,6 @@ export const Item = styled.li`
     visibility: visible !important;
   }
 
-  @media (max-width: 739px) {
-    ${Link} {
-      padding: 0;
-      border-radius: ${(props) => borderRadiusSmall(props.className)};
-    }
-  }
   @media (max-width: 399px) {
     ${Link} {
       font-size: 14px;
