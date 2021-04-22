@@ -49,6 +49,29 @@ const Popup = styled.div`
   }
 `;
 
+const ButtonBox = styled.div`
+  display: none;
+  position: absolute;
+  z-index: 99999;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  button {
+    width: 115px;
+    padding: 6px;
+    margin-right: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid;
+    svg {
+      margin-right: 6px;
+    }
+  }
+`
+
 const Preview = styled.div`
   display: none;
   position: absolute;
@@ -220,6 +243,35 @@ const App = () => {
     <>
       <Floor7 />
       <Menu className="menu" />
+      <ButtonBox className="button-box">
+        <button id="highlight">
+          <FeatherIcon
+            icon="loader"
+            size="24"
+            fill="white"
+            color="black"
+          />
+          <small className="text">Highlight</small>
+        </button>
+        <button id="virtual_360">
+          <FeatherIcon
+            icon="codepen"
+            size="24"
+            fill="white"
+            color="black"
+          />
+          <small className="text">360 Preview</small>
+        </button>
+        <button id="image_360">
+          <FeatherIcon
+            icon="image"
+            size="24"
+            fill="white"
+            color="black"
+          />
+          <small className="text">3D Image</small>
+        </button>
+      </ButtonBox>
       <section
         id="wr360PlayerId"
         className="wr360_player"

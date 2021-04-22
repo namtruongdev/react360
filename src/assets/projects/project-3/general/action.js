@@ -17,6 +17,8 @@ export const initializeAPIDemo = (api) => {
   const icon_btn = document.querySelector('#iconPreview');
   const icon_highlight = document.querySelector('#icon-highlight');
   const icon_3D = document.querySelector('#icon-3D');
+  const general = document.querySelector('#general');
+  const button_box = document.querySelector('.button-box');
 
   const img = document.createElement('img');
   const img_floor7 = document.querySelector('.floor-7');
@@ -46,6 +48,10 @@ export const initializeAPIDemo = (api) => {
   const closePreview = document.querySelector('.close-preview');
 
   const drone_view = document.querySelector('#drone-view');
+
+  general.addEventListener('click', () => {
+    button_box.style.display = 'none';
+  });
 
   drone_view.addEventListener('click', () => {
     preview.style.display = 'block';
@@ -997,11 +1003,7 @@ export const initializeAPIDemo = (api) => {
 
   const floor_0 = document.querySelector("#floor-0");
   floor_0.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = true;
     image_360.style.cursor = 'not-allowed';
     icon_3D.style.cursor = 'not-allowed';
@@ -1011,27 +1013,11 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
   });
 
   const floor_1 = document.querySelector("#floor-1");
   floor_1.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = true;
     image_360.style.cursor = 'not-allowed';
     icon_3D.style.cursor = 'not-allowed';
@@ -1041,27 +1027,11 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
   });
 
   const floor_2 = document.querySelector("#floor-2");
   floor_2.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = false;
     image_360.style.cursor = 'pointer';
     icon_3D.style.cursor = 'pointer';
@@ -1071,18 +1041,6 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
 
     virtual_360.addEventListener('click', () => {
       preview.style.display = 'block';
@@ -1103,11 +1061,7 @@ export const initializeAPIDemo = (api) => {
 
   const floor_3 = document.querySelector("#floor-3");
   floor_3.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = false;
     image_360.style.cursor = 'pointer';
     icon_3D.style.cursor = 'pointer';
@@ -1117,18 +1071,6 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
 
     virtual_360.addEventListener('click', () => {
       preview.style.display = 'block';
@@ -1148,11 +1090,7 @@ export const initializeAPIDemo = (api) => {
 
   const floor_4 = document.querySelector("#floor-4");
   floor_4.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = true;
     image_360.style.cursor = 'not-allowed';
     icon_3D.style.cursor = 'not-allowed';
@@ -1162,27 +1100,11 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
   });
 
   const floor_5 = document.querySelector("#floor-5");
   floor_5.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = false;
     image_360.style.cursor = 'pointer';
     icon_3D.style.cursor = 'pointer';
@@ -1191,18 +1113,6 @@ export const initializeAPIDemo = (api) => {
     icon_btn.style.cursor = 'pointer';
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
 
     virtual_360.addEventListener('click', () => {
       preview.style.display = 'block';
@@ -1223,11 +1133,7 @@ export const initializeAPIDemo = (api) => {
 
   const floor_6 = document.querySelector("#floor-6");
   floor_6.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = true;
     image_360.style.cursor = 'not-allowed';
     icon_3D.style.cursor = 'not-allowed';
@@ -1237,27 +1143,11 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
   });
 
   const floor_7 = document.querySelector("#floor-7");
   floor_7.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = false;
     image_360.style.cursor = 'pointer';
     icon_3D.style.cursor = 'pointer';
@@ -1267,18 +1157,6 @@ export const initializeAPIDemo = (api) => {
     virtual_360.disabled = true;
     virtual_360.style.cursor = 'not-allowed';
     icon_btn.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
 
     image_360.addEventListener('click', () => {
       preview.style.display = 'block';
@@ -1481,11 +1359,7 @@ export const initializeAPIDemo = (api) => {
 
   const floor_8 = document.querySelector("#floor-8");
   floor_8.addEventListener('click', () => {
-    popUp.style.display = 'flex';
-    popUp.style.top = '5%';
-    popUp.style.left = '50%';
-    popUp.style.width = 'auto';
-    popUp.style.zIndex = '9999';
+    button_box.style.display = 'flex';
     image_360.disabled = false;
     image_360.style.cursor = 'pointer';
     icon_3D.style.cursor = 'pointer';
@@ -1495,18 +1369,6 @@ export const initializeAPIDemo = (api) => {
     highlight.disabled = true;
     highlight.style.cursor = 'not-allowed';
     icon_highlight.style.cursor = 'not-allowed';
-    virtual_360.style.marginRight = '20px';
-    virtual_360.style.width = '145px';
-    virtual_360.style.border = '1px solid';
-    virtual_360.style.padding = '3%';
-    image_360.style.marginRight = '20px';
-    image_360.style.width = '145px';
-    image_360.style.border = '1px solid';
-    image_360.style.padding = '3%';
-    highlight.style.marginRight = '20px';
-    highlight.style.width = '145px';
-    highlight.style.border = '1px solid';
-    highlight.style.padding = '3%';
 
     image_360.addEventListener('click', () => {
       preview.style.display = 'block';
