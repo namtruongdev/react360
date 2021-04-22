@@ -32,7 +32,7 @@ export const FloorSubmenu = styled.ul`
   /* padding: 15px; */
   visibility: hidden;
   position: absolute;
-  right: -60px;
+  right: -88px;
   bottom: 0;
   transition: all 0.3s linear;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;

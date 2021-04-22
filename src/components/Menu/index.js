@@ -30,47 +30,47 @@ const Menu = () => {
         id: 'floors',
         children: [
           {
-            name: 0,
+            name: "Floor 8",
             to: '#',
             className: '',
           },
           {
-            name: 1,
+            name: "Floor 7",
             to: '#',
             className: '',
           },
           {
-            name: 2,
+            name: "Floor 6",
             to: '#',
             className: '',
           },
           {
-            name: 3,
+            name: "Floor 5",
             to: '#',
             className: '',
           },
           {
-            name: 4,
+            name: "Floor 4",
             to: '#',
             className: '',
           },
           {
-            name: 5,
+            name: "Floor 3",
             to: '#',
             className: '',
           },
           {
-            name: 6,
+            name: "Floor 2",
             to: '#',
             className: '',
           },
           {
-            name: 7,
+            name: "Floor 1",
             to: '#',
             className: '',
           },
           {
-            name: 8,
+            name: "Floor 0",
             to: '#',
             className: '',
           },
@@ -106,7 +106,7 @@ const Menu = () => {
             {link?.children && (
               <FloorSubmenu id="floor-submenu">
                 {link.children.map((el, index) => (
-                  <li key={index} id={`floor-${el.name}`}>
+                  <li key={index} id={`floor-${el.name.slice(5, 12).replace(/\s/g, '')}`}>
                     {el.name}
                   </li>
                 ))}
