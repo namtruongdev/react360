@@ -22,26 +22,26 @@ const Popup = styled.div`
   left: 115px;
 
   button {
-    border:none;
+    border: none;
     border-radius: 5px;
     padding: 4%;
     cursor: pointer;
     margin: auto auto 12px auto;
     display: flex;
-    align-items:center;
+    align-items: center;
     width: 120px;
     background: #fff;
     color: #333;
-      .text{
-        font-weight: 600;
-        display: flex;
-        font-size:13px;
-        align-items:center;
-        padding-left:5px;
-      }
+    .text {
+      font-weight: 600;
+      display: flex;
+      font-size: 13px;
+      align-items: center;
+      padding-left: 5px;
+    }
   }
 
-  .icon-close{
+  .icon-close {
     position: relative;
     border-radius: 50%;
     cursor: pointer;
@@ -65,28 +65,36 @@ const Preview = styled.div`
     width: 80%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
-  } 
+  }
 
   iframe {
     width: 90%;
     height: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     border: none;
   }
 
   @-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
+    from {
+      -webkit-transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+    }
   }
 
   @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
   }
 
   .close-preview {
@@ -208,14 +216,10 @@ const App = () => {
 
   viewer.runImageRotator();
 
-  const onHandleClick = (name) => {
-    // console.log(name);
-  };
-
   return (
     <>
       <Floor7 />
-      <Menu className="menu" onHandleClick={onHandleClick} />
+      <Menu className="menu" />
       <section
         id="wr360PlayerId"
         className="wr360_player"
@@ -236,35 +240,68 @@ const App = () => {
         }}
       ></div>
       <Popup id="popup">
-        <button id="highlight" >
-          <FeatherIcon icon="loader" size="24" fill="white" color="black" className="icon-close" />
+        <button id="highlight">
+          <FeatherIcon
+            icon="loader"
+            size="24"
+            fill="white"
+            color="black"
+            className="icon-close"
+          />
           <small className="text">Highlight</small>
         </button>
-        <button id="virtual_360" >
-          <FeatherIcon icon="codepen" size="24" fill="white" color="black" className="icon-close" id='iconPreview' />
+        <button id="virtual_360">
+          <FeatherIcon
+            icon="codepen"
+            size="24"
+            fill="white"
+            color="black"
+            className="icon-close"
+            id="iconPreview"
+          />
           <small className="text">360 Preview</small>
         </button>
         <button id="image_360">
-          <FeatherIcon icon="image" size="24" fill="white" color="black" className="icon-close" />
+          <FeatherIcon
+            icon="image"
+            size="24"
+            fill="white"
+            color="black"
+            className="icon-close"
+          />
           <small className="text">3D Image</small>
         </button>
       </Popup>
       <Preview className="preview_360">
-        <FeatherIcon icon="x" size="45" fill="black" color="white" className="close-preview" />
+        <FeatherIcon
+          icon="x"
+          size="45"
+          fill="black"
+          color="white"
+          className="close-preview"
+        />
       </Preview>
       <div className="info room_1">
         <div className="info-text">
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -281,14 +318,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -305,14 +350,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -329,14 +382,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -353,14 +414,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -377,14 +446,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -401,14 +478,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -425,14 +510,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -449,14 +542,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
@@ -473,14 +574,22 @@ const App = () => {
           <h4>Name : 201</h4>
           <p>Price: 585,000</p>
           <p>Surface area: 718.71</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Additional space: 84.18</p>
-          <p>(66.7 m<sup>2</sup>)</p>
+          <p>
+            (66.7 m<sup>2</sup>)
+          </p>
           <p>Facing: North/South/East</p>
           <p className="available">Available</p>
         </div>
         <div className="info-image">
-          <img className="info-avatar" src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg" alt="" />
+          <img
+            className="info-avatar"
+            src="/assets/projects/project-3/floor/Floor7/360_assets/images/0001.jpg"
+            alt=""
+          />
           <p className="custom-text">
             <FeatherIcon icon="heart" size="16" fill="white" color="grey" />
             <a href="/#">Wishlist</a>
