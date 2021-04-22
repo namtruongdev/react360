@@ -269,6 +269,7 @@ const App = () => {
             fill="white"
             color="black"
             className="icon-close"
+            id="icon-3D"
           />
           <small className="text">3D Image</small>
         </button>
