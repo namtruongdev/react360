@@ -205,7 +205,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn1 = document.querySelector('#floor-1');
+  const switchBtn1 = document.querySelector('#floor-8');
   switchBtn1.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -226,7 +226,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn2 = document.querySelector('#floor-2');
+  const switchBtn2 = document.querySelector('#floor-7');
   switchBtn2.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -248,7 +248,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn3 = document.querySelector('#floor-3');
+  const switchBtn3 = document.querySelector('#floor-6');
   switchBtn3.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -270,7 +270,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn4 = document.querySelector('#floor-4');
+  const switchBtn4 = document.querySelector('#floor-5');
   switchBtn4.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -292,7 +292,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn5 = document.querySelector('#floor-5');
+  const switchBtn5 = document.querySelector('#floor-4');
   switchBtn5.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -314,7 +314,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn6 = document.querySelector('#floor-6');
+  const switchBtn6 = document.querySelector('#floor-3');
   switchBtn6.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -336,7 +336,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn7 = document.querySelector('#floor-7');
+  const switchBtn7 = document.querySelector('#floor-2');
   switchBtn7.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -358,7 +358,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn8 = document.querySelector('#floor-8');
+  const switchBtn8 = document.querySelector('#floor-1');
   switchBtn8.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
@@ -380,7 +380,7 @@ export const initializeAPIDemo = (api) => {
     }
   });
 
-  const switchBtn9 = document.querySelector('#floor-9');
+  const switchBtn9 = document.querySelector('#floor-0');
   switchBtn9.addEventListener('click', (e) => {
     overlay.style.display = 'block';
     popUp.style.display = 'none';
