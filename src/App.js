@@ -247,6 +247,7 @@ const App = () => {
             fill="white"
             color="black"
             className="icon-close"
+            id="icon-highlight"
           />
           <small className="text">Highlight</small>
         </button>
