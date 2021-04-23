@@ -1,7 +1,7 @@
 import FeatherIcon from 'feather-icons-react';
 import { initializeAPIDemo } from './assets/projects/project-3/general/action.js';
 import license from './assets/projects/project-3/general/license.lic';
-import './assets/projects/project-1/overall/assets/css/round.css';
+import './assets/css/round.css';
 import styled from 'styled-components';
 
 import Menu from './components/Menu';
@@ -70,7 +70,7 @@ const ButtonBox = styled.div`
       margin-right: 6px;
     }
   }
-`
+`;
 
 const Preview = styled.div`
   display: none;
@@ -245,30 +245,15 @@ const App = () => {
       <Menu className="menu" />
       <ButtonBox className="button-box">
         <button id="highlight">
-          <FeatherIcon
-            icon="loader"
-            size="24"
-            fill="white"
-            color="black"
-          />
+          <FeatherIcon icon="loader" size="24" fill="white" color="black" />
           <small className="text">Highlight</small>
         </button>
         <button id="virtual_360">
-          <FeatherIcon
-            icon="codepen"
-            size="24"
-            fill="white"
-            color="black"
-          />
+          <FeatherIcon icon="codepen" size="24" fill="white" color="black" />
           <small className="text">360 Preview</small>
         </button>
         <button id="image_360">
-          <FeatherIcon
-            icon="image"
-            size="24"
-            fill="white"
-            color="black"
-          />
+          <FeatherIcon icon="image" size="24" fill="white" color="black" />
           <small className="text">3D Image</small>
         </button>
       </ButtonBox>
