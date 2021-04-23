@@ -135,7 +135,7 @@ const App = () => {
   viewer.settings.configFileURL =
     '/assets/projects/project-3/general/config.xml';
   viewer.settings.graphicsPath =
-    '/assets/projects/project-1/overall/assets/img/round';
+    '/assets/img/round';
   viewer.settings.alt = '360 degree view ALT description';
   viewer.settings.googleEventTracking = false;
   viewer.settings.apiReadyCallback = (api, isFullScreen) => {
@@ -244,15 +244,15 @@ const App = () => {
       <Floor7 />
       <Menu className="menu" />
       <ButtonBox className="button-box">
-        <button id="highlight">
+        <button id="highlight_floor">
           <FeatherIcon icon="loader" size="24" fill="white" color="black" />
           <small className="text">Highlight</small>
         </button>
-        <button id="virtual_360">
+        <button id="virtual_360_floor">
           <FeatherIcon icon="codepen" size="24" fill="white" color="black" />
           <small className="text">360 Preview</small>
         </button>
-        <button id="image_360">
+        <button id="image_360_floor">
           <FeatherIcon icon="image" size="24" fill="white" color="black" />
           <small className="text">3D Image</small>
         </button>
