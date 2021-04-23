@@ -30,7 +30,6 @@ export const List = styled.ul`
 export const FloorSubmenu = styled.ul`
   background: #fff;
   /* padding: 15px; */
-  visibility: hidden;
   position: absolute;
   right: -88px;
   bottom: 0;
@@ -42,8 +41,12 @@ export const FloorSubmenu = styled.ul`
     border-bottom: 1px solid #f3f3f3;
     cursor: pointer;
     &:hover {
-      background: #013668;
+      background: rgb(5,167,173);
       color: #fff;
+    }
+    &.active {
+      color: white;
+      background-color: #013668;
     }
   }
   li:last-child {
@@ -81,9 +84,6 @@ export const Link = styled.a`
 
 export const Item = styled.li`
   list-style: none;
-  &:hover #floor-submenu {
-    visibility: visible !important;
-  }
 
   @media (max-width: 399px) {
     ${Link} {
@@ -93,6 +93,33 @@ export const Item = styled.li`
   }
   &.active {
     ${Link} {
+      color: white !important;
+      background-color: #013668 !important;
+    }
+
+    details {
+      background-color: #013668 !important;
+      summary {
+        color: white !important;
+      }
+    }
+  }
+
+  summary{
+    outline: none;
+    color: #013668;
+    font-size: 16px;
+    height: 40px;
+    padding-right: 10px;
+    padding-left: 15px;
+    min-width: 60px;
+    line-height: 40px;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(5, 167, 173);
+      color: white;
+    }
+    &.active {
       color: white !important;
       background-color: #013668 !important;
     }

@@ -12,13 +12,16 @@ export const initializeAPIDemo = (api) => {
   const virtual_360 = document.querySelector('#virtual_360');
   const image_360 = document.querySelector('#image_360');
   const highlight = document.querySelector('#highlight');
+  const virtual_360_floor = document.querySelector('#virtual_360_floor');
+  const image_360_floor = document.querySelector('#image_360_floor');
+  const highlight_floor = document.querySelector('#highlight_floor');
   const generalSnowBtn = document.querySelector('#general-snow');
   const overlay = document.querySelector('#overlay');
   const icon_btn = document.querySelector('#iconPreview');
   const icon_highlight = document.querySelector('#icon-highlight');
-  const icon_3D = document.querySelector('#icon-3D');
   const general = document.querySelector('#general');
   const button_box = document.querySelector('.button-box');
+  const details = document.querySelector("details");
 
   const img = document.createElement('img');
   const img_floor7 = document.querySelector('.floor-7');
@@ -52,6 +55,9 @@ export const initializeAPIDemo = (api) => {
   general.addEventListener('click', () => {
     button_box.style.display = 'none';
   });
+  general.addEventListener('click', () => {
+    details.removeAttribute('open');
+  })
 
   drone_view.addEventListener('click', () => {
     preview.style.display = 'block';
@@ -1004,45 +1010,36 @@ export const initializeAPIDemo = (api) => {
   const floor_0 = document.querySelector("#floor-0");
   floor_0.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = true;
-    image_360.style.cursor = 'not-allowed';
-    icon_3D.style.cursor = 'not-allowed';
-    virtual_360.disabled = true;
-    virtual_360.style.cursor = 'not-allowed';
-    icon_btn.style.cursor = 'not-allowed';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = true;
+    image_360_floor.style.cursor = 'not-allowed';
+    virtual_360_floor.disabled = true;
+    virtual_360_floor.style.cursor = 'not-allowed';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
   });
 
   const floor_1 = document.querySelector("#floor-1");
   floor_1.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = true;
-    image_360.style.cursor = 'not-allowed';
-    icon_3D.style.cursor = 'not-allowed';
-    virtual_360.disabled = true;
-    virtual_360.style.cursor = 'not-allowed';
-    icon_btn.style.cursor = 'not-allowed';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = true;
+    image_360_floor.style.cursor = 'not-allowed';
+    virtual_360_floor.disabled = true;
+    virtual_360_floor.style.cursor = 'not-allowed';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
   });
 
   const floor_2 = document.querySelector("#floor-2");
   floor_2.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = false;
-    image_360.style.cursor = 'pointer';
-    icon_3D.style.cursor = 'pointer';
-    virtual_360.disabled = false;
-    virtual_360.style.cursor = 'pointer';
-    icon_btn.style.cursor = 'pointer';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = false;
+    image_360_floor.style.cursor = 'pointer';
+    virtual_360_floor.disabled = false;
+    virtual_360_floor.style.cursor = 'pointer';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
 
-    virtual_360.addEventListener('click', () => {
+    virtual_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       iframe.src =
         '/assets/projects/project-3/floor/Floor2/Virtual_360/tour.html';
@@ -1050,7 +1047,7 @@ export const initializeAPIDemo = (api) => {
       preview.append(iframe);
     });
 
-    image_360.addEventListener('click', () => {
+    image_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       img.src =
         '/assets/projects/project-3/floor/Floor2/360_image/T2_305B.jpg';
@@ -1062,17 +1059,14 @@ export const initializeAPIDemo = (api) => {
   const floor_3 = document.querySelector("#floor-3");
   floor_3.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = false;
-    image_360.style.cursor = 'pointer';
-    icon_3D.style.cursor = 'pointer';
-    virtual_360.disabled = false;
-    virtual_360.style.cursor = 'pointer';
-    icon_btn.style.cursor = 'pointer';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = false;
+    image_360_floor.style.cursor = 'pointer';
+    virtual_360_floor.disabled = false;
+    virtual_360_floor.style.cursor = 'pointer';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
 
-    virtual_360.addEventListener('click', () => {
+    virtual_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       iframe.src =
         '/assets/projects/project-3/floor/Floor3/Virtual_360/tour.html';
@@ -1080,7 +1074,7 @@ export const initializeAPIDemo = (api) => {
       preview.append(iframe);
     });
 
-    image_360.addEventListener('click', () => {
+    image_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       img.src = '/assets/projects/project-3/floor/Floor3/360_image/T3_202B.jpg';
       iframe.remove();
@@ -1091,30 +1085,25 @@ export const initializeAPIDemo = (api) => {
   const floor_4 = document.querySelector("#floor-4");
   floor_4.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = true;
-    image_360.style.cursor = 'not-allowed';
-    icon_3D.style.cursor = 'not-allowed';
-    virtual_360.disabled = true;
-    virtual_360.style.cursor = 'not-allowed';
-    icon_btn.style.cursor = 'not-allowed';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = true;
+    image_360_floor.style.cursor = 'not-allowed';
+    virtual_360_floor.disabled = true;
+    virtual_360_floor.style.cursor = 'not-allowed';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
   });
 
   const floor_5 = document.querySelector("#floor-5");
   floor_5.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = false;
-    image_360.style.cursor = 'pointer';
-    icon_3D.style.cursor = 'pointer';
-    virtual_360.disabled = false;
-    virtual_360.style.cursor = 'pointer';
-    icon_btn.style.cursor = 'pointer';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = false;
+    image_360_floor.style.cursor = 'pointer';
+    virtual_360_floor.disabled = false;
+    virtual_360_floor.style.cursor = 'pointer';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
 
-    virtual_360.addEventListener('click', () => {
+    virtual_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       iframe.src =
         '/assets/projects/project-3/floor/Floor5/Virtual_360/tour.html';
@@ -1122,7 +1111,7 @@ export const initializeAPIDemo = (api) => {
       preview.append(iframe);
     });
 
-    image_360.addEventListener('click', () => {
+    image_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       img.src =
         '/assets/projects/project-3/floor/Floor5/360_image/T5_2001A.jpg';
@@ -1134,38 +1123,32 @@ export const initializeAPIDemo = (api) => {
   const floor_6 = document.querySelector("#floor-6");
   floor_6.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = true;
-    image_360.style.cursor = 'not-allowed';
-    icon_3D.style.cursor = 'not-allowed';
-    virtual_360.disabled = true;
-    virtual_360.style.cursor = 'not-allowed';
-    icon_btn.style.cursor = 'not-allowed';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = true;
+    image_360_floor.style.cursor = 'not-allowed';
+    virtual_360_floor.disabled = true;
+    virtual_360_floor.style.cursor = 'not-allowed';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
   });
 
   const floor_7 = document.querySelector("#floor-7");
   floor_7.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = false;
-    image_360.style.cursor = 'pointer';
-    icon_3D.style.cursor = 'pointer';
-    highlight.disabled = false;
-    highlight.style.cursor = 'pointer';
-    icon_highlight.style.cursor = 'pointer';
-    virtual_360.disabled = true;
-    virtual_360.style.cursor = 'not-allowed';
-    icon_btn.style.cursor = 'not-allowed';
+    image_360_floor.disabled = false;
+    image_360_floor.style.cursor = 'pointer';
+    highlight_floor.disabled = false;
+    highlight_floor.style.cursor = 'pointer';
+    virtual_360_floor.disabled = true;
+    virtual_360_floor.style.cursor = 'not-allowed';
 
-    image_360.addEventListener('click', () => {
+    image_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       img.src = '/assets/projects/project-3/floor/Floor7/360_image/T7_402B.jpg';
       iframe.remove();
       preview.append(img);
     });
 
-    highlight.addEventListener('click', () => {
+    highlight_floor.addEventListener('click', () => {
       document
         .querySelectorAll(
           '.info, .info div, .info p, .info h4, .info sup, .info svg, .info img, .info a'
@@ -1360,17 +1343,14 @@ export const initializeAPIDemo = (api) => {
   const floor_8 = document.querySelector("#floor-8");
   floor_8.addEventListener('click', () => {
     button_box.style.display = 'flex';
-    image_360.disabled = false;
-    image_360.style.cursor = 'pointer';
-    icon_3D.style.cursor = 'pointer';
-    virtual_360.disabled = true;
-    virtual_360.style.cursor = 'not-allowed';
-    icon_btn.style.cursor = 'not-allowed';
-    highlight.disabled = true;
-    highlight.style.cursor = 'not-allowed';
-    icon_highlight.style.cursor = 'not-allowed';
+    image_360_floor.disabled = false;
+    image_360_floor.style.cursor = 'pointer';
+    virtual_360_floor.disabled = true;
+    virtual_360_floor.style.cursor = 'not-allowed';
+    highlight_floor.disabled = true;
+    highlight_floor.style.cursor = 'not-allowed';
 
-    image_360.addEventListener('click', () => {
+    image_360_floor.addEventListener('click', () => {
       preview.style.display = 'block';
       img.src = '/assets/projects/project-3/floor/Floor8/360_image/T8_402B.jpg';
       iframe.remove();
