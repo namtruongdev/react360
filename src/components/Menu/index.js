@@ -90,6 +90,11 @@ const Menu = () => {
     setActiveLink(name);
   }, []);
 
+  const [isActive, setActive] = useState('');
+  const handleActiveFloor = (index) => {
+    setActive(index);
+  }
+
   return (
     <MenuContainers id="menu">
       <List>
@@ -102,15 +107,23 @@ const Menu = () => {
             }
             id={link.id}
           >
-            <Link href={link.to}>{link.name}</Link>
+            {!link?.children && <Link href={link.to}>{link.name}</Link>}
             {link?.children && (
-              <FloorSubmenu id="floor-submenu">
-                {link.children.map((el, index) => (
-                  <li key={index} id={`floor-${el.name.slice(5, 12).replace(/\s/g, '')}`}>
-                    {el.name}
-                  </li>
-                ))}
-              </FloorSubmenu>
+              <details>
+                <summary>{link.name}</summary>
+                <FloorSubmenu id="floor-submenu">
+                  {link.children.map((el, index) => (
+                    <li
+                      className={isActive === index ? 'active' : ''}
+                      key={index}
+                      id={`floor-${el.name.slice(5, 12).replace(/\s/g, '')}`}
+                      onClick={() => handleActiveFloor(index)}
+                    >
+                      {el.name}
+                    </li>
+                  ))}
+                </FloorSubmenu>
+              </details>
             )}
           </Item>
         ))}
