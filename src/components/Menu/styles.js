@@ -75,7 +75,6 @@ export const Link = styled.a`
   min-width: 60px;
   text-decoration: none;
   line-height: 40px;
-  text-align: center;
   &:hover {
     background-color: rgb(5, 167, 173);
     color: white;
@@ -112,10 +111,11 @@ export const Item = styled.li`
     height: 40px;
     padding-right: 10px;
     padding-left: 10px;
-    text-align: center;
     min-width: 60px;
     line-height: 40px;
     cursor: pointer;
+    list-style: none;
+    position: relative;
     &:hover {
       background-color: rgb(5, 167, 173);
       color: white;
@@ -124,7 +124,15 @@ export const Item = styled.li`
       color: white !important;
       background-color: #013668 !important;
     }
+    &::after {
+      // content: "▼";
+      content: "▶";
+      position: absolute;
+      right: 12px;
+      font-size: 12px;
+    }
   }
+}
 `;
 
 export const borderRadiusLarge = (className) => {
