@@ -111,7 +111,8 @@ export const Item = styled.li`
     font-size: 16px;
     height: 40px;
     padding-right: 10px;
-    padding-left: 15px;
+    padding-left: 10px;
+    text-align: center;
     min-width: 60px;
     line-height: 40px;
     cursor: pointer;
